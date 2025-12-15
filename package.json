@@ -1,0 +1,33 @@
+{
+  "name": "testai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://www.saucedemo.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vladeezyy/testAI.git"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vladeezyy/testAI/issues"
+  },
+  "homepage": "https://github.com/Vladeezyy/testAI#readme",
+  "description": "Playwright automation tests for SauceDemo website",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  }
+}
