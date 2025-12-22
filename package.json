@@ -1,10 +1,9 @@
 {
   "name": "testai",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "",
+  "description": "Playwright automation tests for PICMG BoardBot",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
@@ -14,27 +13,11 @@
     "report:allure:generate": "allure generate allure-results --clean -o allure-report",
     "report:allure:open": "allure open allure-report",
     "clear:reports": "node utils/clearReports.js"
-=======
-  "main": "index.js",
-  "scripts": {
-    "test": "playwright test",
-    "test:headed": "playwright test --headed",
-    "test:debug": "playwright test --debug",
-    "test:ui": "playwright test --ui",
-    "report": "playwright show-report",
-    "codegen": "playwright codegen https://www.saucedemo.com"
->>>>>>> 834d36a1a8a0180e8e12fba1b6115ac69df86756
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vladeezyy/testAI.git"
   },
-<<<<<<< HEAD
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-=======
   "keywords": [
     "playwright",
     "automation",
@@ -43,21 +26,15 @@
   ],
   "author": "",
   "license": "ISC",
->>>>>>> 834d36a1a8a0180e8e12fba1b6115ac69df86756
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Vladeezyy/testAI/issues"
   },
   "homepage": "https://github.com/Vladeezyy/testAI#readme",
-<<<<<<< HEAD
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^24.10.1",
     "allure-commandline": "^2.32.1",
     "allure-playwright": "^3.0.0"
-=======
-  "description": "Playwright automation tests for SauceDemo website",
-  "devDependencies": {
-    "@playwright/test": "^1.57.0"
->>>>>>> 834d36a1a8a0180e8e12fba1b6115ac69df86756
   }
 }
