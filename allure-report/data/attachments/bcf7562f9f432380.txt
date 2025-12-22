@@ -1,0 +1,2 @@
+🔤 Keyword Validation: ENABLED
+💡 Tip: Set USE_AI_VALIDATION=true to enable AI validation
