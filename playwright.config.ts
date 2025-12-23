@@ -28,7 +28,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'on',  // Record video for ALL tests
-    headless: false,
+    headless: true,
     viewport: { width: 1920, height: 1080 },
     
     // Add more human-like behavior to avoid bot detection
