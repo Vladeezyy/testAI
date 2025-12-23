@@ -66,8 +66,12 @@ jobs:
         ls -t | tail -n +4 | xargs -r rm -rf
         cd ../..
         
-        # Create index page
-        cat > docs/index.html << 'EOF'
+        # Don't overwrite the Allure index.html - instead create a redirect page
+        # The main Allure report is already in docs/ with its own index.html
+        
+        # Create a landing page in a separate directory
+        mkdir -p docs/landing
+        cat > docs/landing/index.html << 'EOF'
         <!DOCTYPE html>
         <html>
         <head>
@@ -118,19 +122,19 @@ jobs:
             <ul class="report-list">
         EOF
         
-        # Add current report first
-        echo "<li class='report-item current'><a href='widgets/summary.html'>🟢 Latest Report (Run #${RUN_NUMBER})<span class='badge badge-current'>CURRENT</span></a><br><small style='color: rgba(255,255,255,0.8);'>Generated: ${TIMESTAMP}</small></li>" >> docs/index.html
+        # Add current report first (points to main index.html at root)
+        echo "<li class='report-item current'><a href='../index.html'>🟢 Latest Report (Run #${RUN_NUMBER})<span class='badge badge-current'>CURRENT</span></a><br><small style='color: rgba(255,255,255,0.8);'>Generated: ${TIMESTAMP}</small></li>" >> docs/landing/index.html
         
         # Add links to archived reports (if they exist)
         if [ -d "docs/reports" ] && [ "$(ls -A docs/reports 2>/dev/null)" ]; then
           cd docs/reports
           for dir in $(ls -t | head -n 2); do
-            echo "<li class='report-item'><a href='reports/$dir/widgets/summary.html'>📄 Archive: $dir</a></li>" >> ../index.html
+            echo "<li class='report-item'><a href='../reports/$dir/index.html'>📄 Archive: $dir</a></li>" >> ../landing/index.html
           done
           cd ../..
         fi
         
-        cat >> docs/index.html << 'EOF'
+        cat >> docs/landing/index.html << 'EOF'
             </ul>
             <p style="text-align: center; color: #999; margin-top: 40px; font-size: 14px;">
               Last updated: <span id="timestamp"></span>
