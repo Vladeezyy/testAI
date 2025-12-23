@@ -1,0 +1,5 @@
+Product: CP6005
+Manufacturer: AAEON TECHNOLOGY
+Category: CP6005
+Subcategory: Serial Boards - 3U Processors
+More Info: https://www.picmg.org/spec-product/3u-compactpci-serial-4th5th-generation-intel-core-processor-blade-with-ecc-cpci-a3515-5/

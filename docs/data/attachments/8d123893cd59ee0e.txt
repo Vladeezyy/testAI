@@ -1,0 +1,5 @@
+Product: CP32107
+Manufacturer: BEIJING LINKEDHOPE INTELLIGENT TECHNOLOGIES
+Category: cPCI Board
+Subcategory: 3U Processor
+More Info: https://www.picmg.org/spec-product/cpci-sbc-based-on-intel-4th-gen-core-i7-processor-cp32107/

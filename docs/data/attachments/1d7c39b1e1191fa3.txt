@@ -1,0 +1,1 @@
+Do you have a front-to-rear cooled 1U chassis with 6 AMC slots and a modern shelf manager/MCH that supports things like GPS, IEEE1588, SyncE, or NTP, plus low-jitter clocking?

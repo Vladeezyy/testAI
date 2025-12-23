@@ -1,0 +1,25 @@
+# 📈 TEST RESULTS SUMMARY - TC1.1
+
+## ⏱️ Performance Metrics
+- **Response Latency:** 14.85 seconds ✅ (Normal)
+
+## 📝 Search Query
+```
+I need a compact 3U 19-inch AdvancedTCA chassis with 2 ATCA slots and RTM support, compliant with PICMG 3.0 / NEBS, and using redundant AC PSUs (around 2.2kW total, N+1).
+```
+
+## 🎯 Search Requirements
+- **Form Factor:** 3U 19-inch
+- **Slots:** 2 ATCA with RTM support
+- **Compliance:** PICMG 3.0 / NEBS
+- **Power:** Redundant AC PSUs (~2.2kW total, N+1)
+
+## 📊 Results Breakdown
+- **Total Products Found:** 0
+- **✅ Suitable Products (AdvancedTCA):** 0
+- **⚠️ Unsuitable Products:** 0
+- **⭐ Original Product Found:** No
+
+
+
+## 📦 Product Details
