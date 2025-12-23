@@ -19,7 +19,7 @@ import {
 
 test.describe('AdvancedMC Product Search - Suite 1.2', () => {
   
-  // Clear old reports but keep last 10
+  // Clear old reports but keep last 100
   test.beforeAll(async () => {
     const fs = require('fs');
     const path = require('path');
@@ -38,15 +38,15 @@ test.describe('AdvancedMC Product Search - Suite 1.2', () => {
       }))
       .sort((a: any, b: any) => b.time - a.time);
     
-    // Keep latest 10, delete the rest
-    if (files.length > 10) {
-      console.log(`\n🗑️  Keeping latest 10 reports, removing ${files.length - 10} old reports\n`);
-      files.slice(10).forEach((file: any) => {
+    // Keep latest 100, delete the rest
+    if (files.length > 100) {
+      console.log(`\n🗑️  Keeping latest 100 reports, removing ${files.length - 100} old reports\n`);
+      files.slice(100).forEach((file: any) => {
         fs.unlinkSync(path.join(reportsDir, file.name));
         console.log(`   Deleted: ${file.name}`);
       });
     } else {
-      console.log(`\n📁  Current reports: ${files.length} (will keep up to 10)\n`);
+      console.log(`\n📁  Current reports: ${files.length} (will keep up to 100)\n`);
     }
   });
   

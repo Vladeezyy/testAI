@@ -36,14 +36,14 @@ test.describe('AdvancedTCA Product Search - Suite 1.3', () => {
       }))
       .sort((a: any, b: any) => b.time - a.time);
     
-    if (files.length > 10) {
-      console.log(`\n🗑️  Keeping latest 10 reports, removing ${files.length - 10} old reports\n`);
-      files.slice(10).forEach((file: any) => {
+    if (files.length > 100) {
+      console.log(`\n🗑️  Keeping latest 100 reports, removing ${files.length - 100} old reports\n`);
+      files.slice(100).forEach((file: any) => {
         fs.unlinkSync(path.join(reportsDir, file.name));
         console.log(`   Deleted: ${file.name}`);
       });
     } else {
-      console.log(`\n📁  Current reports: ${files.length} (will keep up to 10)\n`);
+      console.log(`\n📁  Current reports: ${files.length} (will keep up to 100)\n`);
     }
   });
   
