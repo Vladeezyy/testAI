@@ -1,0 +1,70 @@
+
+🗑️  Keeping latest 10 reports, removing 1 old reports
+
+   Deleted: AdvancedMC_TC1_2025-12-23T09-34-52-069Z.md
+✅ Query submitted to BoardBot
+⏱️  Timer started - measuring response time...
+⏳ Waiting up to 20 seconds for results...
+✅ Loading indicator disappeared
+✅ Results table appeared
+✅ Wait complete
+
+⏱️  Response Latency: 11.38 seconds
+
+
+📊 Extracting product information from results table...
+
+📋 Found 1 products in table
+📦 Extracting 1 products (with URLs)...
+
+🔍 Product 1: ATCA-7310
+   📍 Total cells in row: 7
+   📍 Found button in cell 6: "More Info"
+   ✅ Found More Info button at cell 6
+   🔗 Clicking More Info to extract URL...
+   📍 Current URL before click: https://www.picmg.org/
+   ⏳ Waiting for new tab to open...
+   ✅ URL extracted from new tab: https://www.picmg.org/spec-product/atca-7310-dual-cn6880-atca-node-blade-with-40gbe-switch/
+   ✅ New tab closed, back at results
+   ✅ Product 1 extracted
+
+✅ Successfully extracted 1 products with URLs
+
+
+✅ Extracted 1 products
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                              TEST REPORT
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📝 Prompt: We are building a high-end telecom/data-com platform and need something reliable that supports very high bandwidth and lots of processing cores. Ideally an ATCA solution made for 24/7 network traffic. Any good options?
+
+📊 Summary:
+   • Total Results: 1
+   • ✅ Suitable Products (AdvancedMC): 0
+   • ⚠️  Unsuitable Products: 1
+
+⚠️  WARNINGS:
+   ⚠️ WARNING: Product #1 "ATCA-7310" has category "ATCA Board" (Expected: AdvancedTCA)
+
+📦 Product Details:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| # | Product Name      | Manufacturer    | Category      | Subcategory   | More Info URL
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| 1  | ATCA-7310         | ADVANTECH       | ATCA Board    | Processor     | https://www.picmg.org/spec-product/atca-
+────────────────────────────────────────────────────────────────────────────────────────────────────
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+
+📄 Report saved to: /home/runner/work/testAI/testAI/test-results/reports/AdvancedTCA_TC2.2_2025-12-23T09-38-15-731Z.md
+
+✅ Found 1 total products
+✅ Suitable (AdvancedTCA): 0
+Product 1: ATCA-7310
+  - Manufacturer: ADVANTECH
+  - Category: ATCA Board
+  - Subcategory: Processor
+  - URL: https://www.picmg.org/spec-product/atca-7310-dual-cn6880-atca-node-blade-with-40gbe-switch/
+🎥 Video saved at: /home/runner/work/testAI/testAI/test-results/artifacts/.playwright-artifacts-0/0a9d20b029c24f4f81326beeab39bd1c.webm
+✅ Video attached to Allure report

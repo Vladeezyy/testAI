@@ -1,0 +1,68 @@
+🔤 Keyword Validation: ENABLED
+💡 Tip: Set USE_AI_VALIDATION=true to enable AI validation
+
+🚀 Starting TC1 with AI Validation...
+🔍 Searching...
+      ⏳ Loading indicator detected...
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+      ⚡ Loading was too fast or no indicator shown
+      ✓ Loading complete
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+✅ Found 3 products
+
+
+📋 Validating first 5 products for TC1-AI...
+🔤 Keyword Validation: ENABLED (set USE_AI_VALIDATION=true to use AI)
+      ⚡ Loading was too fast or no indicator shown
+      ✓ Loading complete
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+
+   🔍 Checking Product 1...
+      Name: CONGA-B7XD
+      Manufacturer: CONGATEC
+      Category: COM Express®
+      ⏳ Waiting for modal to load...
+      📄 Extracting modal content...
+      ✓ Found section content (202 chars)
+      📝 Description preview: 
+									PICMG is a non-profit consortium of 140+ member companies.We collaboratively design and manage open, interoperable technologyspecifications for high-performance edge computing systems.						...
+         ✓ Found: "high-performance"
+      ✓ Keywords found: 1/7
+      Relevance: 14.3%
+      ⚠️  POSSIBLY NOT RELEVANT
+
+   🔍 Checking Product 2...
+      Name: AM5030
+      Manufacturer: KONTRON
+      Category: AdvancedMC
+      ⏳ Waiting for modal to load...
+      📄 Extracting modal content...
+      ✓ Found section content (202 chars)
+      📝 Description preview: 
+									PICMG is a non-profit consortium of 140+ member companies.We collaboratively design and manage open, interoperable technologyspecifications for high-performance edge computing systems.						...
+         ✓ Found: "high-performance"
+      ✓ Keywords found: 1/7
+      Relevance: 14.3%
+      ⚠️  POSSIBLY NOT RELEVANT
+
+   🔍 Checking Product 3...
+      Name: MIC-5342
+      Manufacturer: ADVANTECH
+      Category: AdvancedTCA
+      ⏳ Waiting for modal to load...
+      📄 Extracting modal content...
+      ✓ Found section content (202 chars)
+      📝 Description preview: 
+									PICMG is a non-profit consortium of 140+ member companies.We collaboratively design and manage open, interoperable technologyspecifications for high-performance edge computing systems.						...
+         ✓ Found: "high-performance"
+      ✓ Keywords found: 1/7
+      Relevance: 14.3%
+      ⚠️  POSSIBLY NOT RELEVANT
+
+   📊 TC1-AI Validation Summary:
+      Total checked: 3
+      Relevant products: 0/3
+      Relevance rate: 0.0%

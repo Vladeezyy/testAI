@@ -1,0 +1,1 @@
+Looking for an AMC.1/AMC.2/AMC.4 compliant module that combines a reconfigurable FPGA with an on-board quad-core P2040 processor, plus a PCIe x4 link to the FPGA and high-speed front-panel networking

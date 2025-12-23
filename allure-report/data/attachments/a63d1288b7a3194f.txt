@@ -1,0 +1,69 @@
+
+📁  Current reports: 4 (will keep up to 10)
+
+✅ Query submitted to BoardBot
+⏱️  Timer started - measuring response time...
+⏳ Waiting up to 20 seconds for results...
+✅ Loading indicator disappeared
+✅ Results table appeared
+✅ Wait complete
+
+⏱️  Response Latency: 9.85 seconds
+
+
+📊 Extracting product information from results table...
+
+📋 Found 1 products in table
+📦 Extracting 1 products (with URLs)...
+
+🔍 Product 1: VT951
+   📍 Total cells in row: 7
+   📍 Found button in cell 6: "More Info"
+   ✅ Found More Info button at cell 6
+   🔗 Clicking More Info to extract URL...
+   📍 Current URL before click: https://www.picmg.org/
+   ⏳ Waiting for new tab to open...
+   ✅ URL extracted from new tab: https://www.picmg.org/spec-product/vt951/
+   ✅ New tab closed, back at results
+   ✅ Product 1 extracted
+
+✅ Successfully extracted 1 products with URLs
+
+
+✅ Extracted 1 products
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                              TEST REPORT
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📝 Prompt: I'm looking for a rugged 1U MicroTCA chassis for Mil/Aero, designed to handle shock and vibration, with around 6 mid-size AMC slots and redundant hot-swappable PSUs
+
+📊 Summary:
+   • Total Results: 1
+   • ✅ Suitable Products (AdvancedMC): 0
+   • ⚠️  Unsuitable Products: 1
+
+⚠️  WARNINGS:
+   ⚠️ WARNING: Product #1 "VT951" has category "AdvancedMC" (Expected: MicroTCA)
+
+📦 Product Details:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| # | Product Name      | Manufacturer    | Category      | Subcategory   | More Info URL
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| 1  | VT951             | VADATECH INC    | AdvancedMC    | MTCA.3/Rugged | https://www.picmg.org/spec-product/vt951
+────────────────────────────────────────────────────────────────────────────────────────────────────
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+
+📄 Report saved to: /home/runner/work/testAI/testAI/test-results/reports/MicroTCA_TC2.3_2025-12-23T09-35-57-822Z.md
+
+✅ Found 1 total products
+✅ Suitable (MicroTCA): 0
+Product 1: VT951
+  - Manufacturer: VADATECH INC
+  - Category: AdvancedMC
+  - Subcategory: MTCA.3/Rugged MIL Chassis
+  - URL: https://www.picmg.org/spec-product/vt951/
+🎥 Video saved at: /home/runner/work/testAI/testAI/test-results/artifacts/.playwright-artifacts-1/7cb7f3a5c37248143d3c52c8eba943b6.webm
+✅ Video attached to Allure report

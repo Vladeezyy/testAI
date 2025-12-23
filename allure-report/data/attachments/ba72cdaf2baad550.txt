@@ -1,0 +1,45 @@
+
+📁  Current reports: 5 (will keep up to 10)
+
+✅ Query submitted to BoardBot
+⏱️  Timer started - measuring response time...
+⏳ Waiting up to 20 seconds for results...
+✅ Loading indicator disappeared
+⚠️  Results table did not appear
+✅ Wait complete
+
+⏱️  Response Latency: 23.92 seconds
+
+
+📊 Extracting product information from results table...
+
+⚠️  No results table found
+
+⚠️  No products extracted
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                              TEST REPORT
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📝 Prompt: Hi, I need an AMC FPGA module with dual zQSFP+ front-panel connectors supporting 100G Ethernet (one port at 100G and another up to ~40G). What matches that?
+
+📊 Summary:
+   • Total Results: 0
+   • ✅ Suitable Products (AdvancedMC): 0
+   • ⚠️  Unsuitable Products: 0
+
+📦 Product Details:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| # | Product Name      | Manufacturer    | Category      | Subcategory   | More Info URL
+────────────────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+
+📄 Report saved to: /home/runner/work/testAI/testAI/test-results/reports/AdvancedMC_TC3.1_2025-12-23T09-36-37-530Z.md
+
+⚠️  No products found in results
+⚠️  No products to validate
+🎥 Video saved at: /home/runner/work/testAI/testAI/test-results/artifacts/.playwright-artifacts-0/fefeb62cfb142045b83ba3b0ed814993.webm
+✅ Video attached to Allure report

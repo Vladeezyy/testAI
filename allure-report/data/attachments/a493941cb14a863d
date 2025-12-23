@@ -1,0 +1,49 @@
+# 📈 TEST RESULTS SUMMARY - TC3.3
+
+## ⏱️ Performance Metrics
+- **Response Latency:** 11.86 seconds ✅ (Normal)
+
+## 📝 Search Query
+```
+Looking for an AMC.1/AMC.2/AMC.4 compliant module that combines a reconfigurable FPGA with an on-board quad-core P2040 processor, plus a PCIe x4 link to the FPGA and high-speed front-panel networking
+```
+
+## 🎯 Search Requirements
+- **Compliance:** AMC.1/AMC.2/AMC.4
+- **FPGA:** Reconfigurable
+- **Processor:** Quad-core P2040
+- **PCIe:** x4 link to FPGA
+- **Networking:** High-speed front-panel
+
+## 📊 Results Breakdown
+- **Total Products Found:** 3
+- **✅ Suitable Products (AdvancedMC):** 0
+- **⚠️ Unsuitable Products:** 3
+- **⭐ Original Product Found:** No
+
+## ⚠️ Warnings
+- ⚠️ WARNING: Product #1 "CONGA-TS97" has category "COM Express" (Expected: AdvancedMC)
+- ⚠️ WARNING: Product #2 "CP6005" has category "CP6005" (Expected: AdvancedMC)
+- ⚠️ WARNING: Product #3 "CP32107" has category "cPCI Board" (Expected: AdvancedMC)
+
+## 📦 Product Details
+
+### 1. CONGA-TS97
+- **Manufacturer:** CONGATEC
+- **Category:** COM Express ⚠️
+- **Subcategory:** —
+- **Product Link:** [🔗 View Product Page](https://www.picmg.org/spec-product/conga-ts97/)
+
+
+### 2. CP6005
+- **Manufacturer:** AAEON TECHNOLOGY
+- **Category:** CP6005 ⚠️
+- **Subcategory:** Serial Boards - 3U Processors
+- **Product Link:** [🔗 View Product Page](https://www.picmg.org/spec-product/3u-compactpci-serial-4th5th-generation-intel-core-processor-blade-with-ecc-cpci-a3515-5/)
+
+
+### 3. CP32107
+- **Manufacturer:** BEIJING LINKEDHOPE INTELLIGENT TECHNOLOGIES
+- **Category:** cPCI Board ⚠️
+- **Subcategory:** 3U Processor
+- **Product Link:** [🔗 View Product Page](https://www.picmg.org/spec-product/cpci-sbc-based-on-intel-4th-gen-core-i7-processor-cp32107/)

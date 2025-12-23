@@ -1,0 +1,37 @@
+🔍 Test Case 3: Searching with specific processor model...
+      ⏳ Loading indicator detected...
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+      ⚡ Loading was too fast or no indicator shown
+      ✓ Loading complete
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+✅ Found 3 products
+
+📋 Validating first 5 products for TC3...
+
+   🔍 Checking Product 1...
+      Name: CONGA-B7XD
+      Manufacturer: CONGATEC
+      Category: COM Express®
+      ✓ Found keywords: AdvancedMC, E-2276ME, Xeon, Intel, PCI Express, PCIe
+      ✅ RELEVANT
+
+   🔍 Checking Product 2...
+      Name: AM5030
+      Manufacturer: KONTRON
+      Category: AdvancedMC
+      ✓ Found keywords: AdvancedMC, E-2276ME, Xeon, Intel, PCI Express, PCIe
+      ✅ RELEVANT
+
+   🔍 Checking Product 3...
+      Name: MIC-5342
+      Manufacturer: ADVANTECH
+      Category: AdvancedTCA
+      ✓ Found keywords: AdvancedMC, E-2276ME, Xeon, Intel, PCI Express, PCIe
+      ✅ RELEVANT
+
+   📊 TC3 Validation Summary:
+      Total checked: 3
+      Relevant products: 3/3
+      Relevance rate: 100.0%

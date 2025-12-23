@@ -1,0 +1,41 @@
+
+🔍 Testing: Query 1 (Processor + Fabric)
+      ⏳ Loading indicator detected...
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+      ⚡ Loading was too fast or no indicator shown
+      ✓ Loading complete
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+   Found 3 products
+
+🔍 Testing: Query 2 (Memory + Ethernet)
+      ⏳ Loading indicator detected...
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+      ⚡ Loading was too fast or no indicator shown
+      ✓ Loading complete
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+   Found 3 products
+
+🔍 Testing: Query 3 (Specific Model)
+      ⏳ Loading indicator detected...
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+      ⚡ Loading was too fast or no indicator shown
+      ✓ Loading complete
+      ⏳ Waiting for results table...
+      ✓ Results table visible
+   Found 3 products
+
+📊 Results Comparison:
+   Query 1 (Processor + Fabric):
+      - Product Count: 3
+      - First Result: CONGA-B7XD
+   Query 2 (Memory + Ethernet):
+      - Product Count: 3
+      - First Result: AMC621
+   Query 3 (Specific Model):
+      - Product Count: 3
+      - First Result: AMC621

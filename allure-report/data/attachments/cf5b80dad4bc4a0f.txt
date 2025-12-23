@@ -1,0 +1,1 @@
+Hey, I am looking for a carrier-grade ATCA system that can handle really heavy network workloads — like security and deep packet processing — and scale way beyond normal rack servers. What systems do you have?
