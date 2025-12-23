@@ -33,7 +33,7 @@ test.describe('AdvancedMC Product Search - Suite 2.1', () => {
     await tag('PCIe-Gen3');
     await tag('MicroTCA');
     await tag('High-Speed');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "I'm after a MicroTCA.4 AMC card that supports PCIe Gen3 x8 or x16 to the backplane—something with good bandwidth for data processing or network acceleration.";
     const maxProducts = 5;

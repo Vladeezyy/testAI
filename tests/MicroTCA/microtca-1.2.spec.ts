@@ -33,7 +33,7 @@ test.describe('MicroTCA Product Search - Suite 1.2', () => {
     await tag('Card-Connectors');
     await tag('Serial-Signals');
     await tag('Standard-Thickness');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "I'm looking for MicroTCA card connectors that fit standard-thickness boards and can run fast serial signals without issues. What connectors would you recommend?";
     const maxProducts = 5;

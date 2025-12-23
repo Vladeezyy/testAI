@@ -37,7 +37,7 @@ test.describe('CompactPCI Product Search - Suite 3.3', () => {
     await tag('M.2-NVMe');
     await tag('Railway');
     await tag('Extended-Temp');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for the MEN G229 CompactPCI Serial single-slot I/O expansion board, ruggedized for railway/industrial environments, providing 3× USB 3.2 Gen1 ports, isolated RS-232 and RS-422/485 interfaces, and an on-board M.2 NVMe slot used as fast boot/storage via PCIe x1, with low power and extended temperature support.";
     const maxProducts = 5;

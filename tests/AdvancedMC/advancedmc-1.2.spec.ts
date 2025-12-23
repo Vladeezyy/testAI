@@ -33,7 +33,7 @@ test.describe('AdvancedMC Product Search - Suite 1.2', () => {
     await tag('ECC-DDR4');
     await tag('10G-Ethernet');
     await tag('High-Memory');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for an AdvancedMC board that has ECC DDR4 memory (ideally 16GB+) and at least one 10G Ethernet port on the front or back.";
     const maxProducts = 5;

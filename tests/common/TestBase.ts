@@ -68,17 +68,20 @@ export class TestBase {
     boardBotPage: BoardBotPage,
     searchPrompt: string
   ): Promise<number> {
-    const startTime = Date.now();
     
     await allureStep(`Submitting query: "${searchPrompt.substring(0, 50)}..."`, async () => {
       await boardBotPage.askBoardBot(searchPrompt);
-      console.log('⏱️  Timer started - measuring response time...');
     });
+
+    // Start timer AFTER submitting query, BEFORE waiting for results
+    const startTime = Date.now();
+    console.log('⏱️  Timer started - measuring response time...');
 
     await allureStep('Waiting for BoardBot response', async () => {
       await boardBotPage.waitForResults(20000);
     });
 
+    // End timer IMMEDIATELY after results appear
     const endTime = Date.now();
     const responseLatency = (endTime - startTime) / 1000;
     

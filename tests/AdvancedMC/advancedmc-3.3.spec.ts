@@ -34,7 +34,7 @@ test.describe('AdvancedMC Product Search - Suite 3.3', () => {
     await tag('P2040');
     await tag('PCIe');
     await tag('Hybrid');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for an AdvancedMC card that combines an FPGA (for custom logic) with a P2040 (or similar PowerPC/Arm SoC) and PCIe connectivity, suitable for real-time data plane or control plane work.";
     const maxProducts = 5;

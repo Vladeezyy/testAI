@@ -34,7 +34,7 @@ test.describe('CompactPCI Product Search - Suite 2.1', () => {
     await tag('M.2');
     await tag('Storage');
     await tag('3U');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hi, I'm looking for a 3U CompactPCI Serial card that lets us add a few NVMe M.2 SSDs into the system. Do you have a carrier board for that?";
     const maxProducts = 5;

@@ -34,7 +34,7 @@ test.describe('COM-HPC Product Search - Suite 1.1', () => {
     await tag('AI');
     await tag('GPU');
     await tag('Edge-Computing');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hi, I'm looking for a really compact compute module for an edge device — something with the new Intel Core Ultra chips and built-in AI/GPU power so we don't need extra accelerators. What do you have?";
     const maxProducts = 5;

@@ -33,7 +33,7 @@ test.describe('AdvancedTCA Product Search - Suite 2.1', () => {
     await tag('Carrier-Grade');
     await tag('DPI');
     await tag('Deep-Packet-Inspection');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hey, we need a carrier-grade AdvancedTCA platform for deep packet inspection (DPI) in a telecom environment. Looking for something with good compute power and network throughput.";
     const maxProducts = 5;

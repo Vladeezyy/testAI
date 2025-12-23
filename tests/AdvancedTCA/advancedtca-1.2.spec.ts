@@ -33,7 +33,7 @@ test.describe('AdvancedTCA Product Search - Suite 1.2', () => {
     await tag('Cooling');
     await tag('Hot-Swap');
     await tag('Redundant');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "We're building a telecom system that needs a full-size AdvancedTCA chassis with strong cooling—ideally hot-swap fans—and redundant power. Can you suggest something?";
     const maxProducts = 5;

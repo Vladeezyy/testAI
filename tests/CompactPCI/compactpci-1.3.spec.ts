@@ -36,7 +36,7 @@ test.describe('CompactPCI Product Search - Suite 1.3', () => {
     await tag('SATA-3.0');
     await tag('10GbE');
     await tag('RoHS');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for the PICMG CompactPCI® Serial backplane intended for the Comtel CompactPCI Serial 9-slot 4U chassis, RoHS compliant, supporting star topologies for PCIe Gen3, USB 2.0/3.0, SATA 3.0, and 10GbE.";
     const maxProducts = 5;

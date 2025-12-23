@@ -33,7 +33,7 @@ test.describe('AdvancedMC Product Search - Suite 3.2', () => {
     await tag('FPGA');
     await tag('DDR3');
     await tag('High-Speed-Processing');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "We need an AdvancedMC FPGA card with onboard DDR3 memory (a few GB at least) for signal processing or packet inspection tasks. Should fit a standard MicroTCA slot.";
     const maxProducts = 5;

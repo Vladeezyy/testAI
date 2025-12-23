@@ -33,7 +33,7 @@ test.describe('AdvancedTCA Product Search - Suite 2.3', () => {
     await tag('Netarium-14');
     await tag('40GbE');
     await tag('Packet-Processing');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for a high-performance AdvancedTCA blade—like the Netarium-14—that has built-in 40GbE connectivity and can handle serious packet processing or analytics workloads.";
     const maxProducts = 5;

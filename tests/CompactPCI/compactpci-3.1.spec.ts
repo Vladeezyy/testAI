@@ -34,7 +34,7 @@ test.describe('CompactPCI Product Search - Suite 3.1', () => {
     await tag('USB');
     await tag('Serial-Ports');
     await tag('NVMe-M.2');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hey, do you have a CompactPCI Serial add-on board that gives extra I/O like USB and serial ports, plus an NVMe M.2 spot for boot or storage? We want it in just one slot.";
     const maxProducts = 5;

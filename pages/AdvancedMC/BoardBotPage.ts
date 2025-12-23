@@ -77,10 +77,13 @@ export class BoardBotPage {
     // Wait for BoardBot to process and display results
     console.log(`⏳ Waiting up to ${timeoutMs/1000} seconds for results...`);
     
+    const startWait = Date.now();
+    
     // First, wait for the loading indicator to disappear
     try {
       await this.page.locator('img[alt="Loading"]').waitFor({ state: 'hidden', timeout: timeoutMs });
-      console.log('✅ Loading indicator disappeared');
+      const elapsed = ((Date.now() - startWait) / 1000).toFixed(2);
+      console.log(`✅ Loading indicator disappeared (${elapsed}s)`);
     } catch {
       console.log('ℹ️  Loading indicator not found or still visible');
     }
@@ -88,14 +91,17 @@ export class BoardBotPage {
     // Then wait for the results table to appear
     try {
       await this.resultsTable.waitFor({ state: 'visible', timeout: 5000 });
-      console.log('✅ Results table appeared');
+      const elapsed = ((Date.now() - startWait) / 1000).toFixed(2);
+      console.log(`✅ Results table appeared (${elapsed}s)`);
     } catch {
       console.log('⚠️  Results table did not appear');
     }
     
-    // Additional wait for results to fully load and render
-    await this.page.waitForTimeout(2000);
-    console.log('✅ Wait complete');
+    // Small wait for table to stabilize (reduced from 2000ms to 500ms)
+    await this.page.waitForTimeout(500);
+    
+    const totalElapsed = ((Date.now() - startWait) / 1000).toFixed(2);
+    console.log(`✅ Wait complete (total: ${totalElapsed}s)`);
   }
 
   async extractProductInfo(maxProducts: number = 5): Promise<ProductInfo[]> {

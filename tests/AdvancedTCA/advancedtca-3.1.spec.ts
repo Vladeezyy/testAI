@@ -33,7 +33,7 @@ test.describe('AdvancedTCA Product Search - Suite 3.1', () => {
     await tag('RTM');
     await tag('Ethernet');
     await tag('PCIe');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "I need a rear module for an ATCA blade that adds a bunch of I/O — like Ethernet ports, maybe some 10G links, plus a PCIe connection to the back. Do you have something like that?";
     const maxProducts = 5;

@@ -33,7 +33,7 @@ test.describe('MicroTCA Product Search - Suite 1.1', () => {
     await tag('Edge-Connectors');
     await tag('Hot-Swap');
     await tag('High-Speed');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hey, we're building a MicroTCA system and need the edge connectors for the cards. Do you have ones that handle hot-swap and high-speed links?";
     const maxProducts = 5;

@@ -33,7 +33,7 @@ test.describe('AdvancedTCA Product Search - Suite 3.2', () => {
     await tag('RTM');
     await tag('Network-Ports');
     await tag('Management');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "We want to expand the rear connectivity of our ATCA setup — more network ports (fiber + copper) and some management access in the back. What rear transition modules would fit?";
     const maxProducts = 5;

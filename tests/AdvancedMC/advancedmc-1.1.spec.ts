@@ -33,7 +33,7 @@ test.describe('AdvancedMC Product Search - Suite 1.1', () => {
     await tag('Xeon');
     await tag('6-core');
     await tag('PCIe');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hi, I need an AdvancedMC processor board with a 6-core Intel Xeon (around 2.8GHz base) for high-performance applications. Prefer something that can work with PCIe or RapidIO fabrics.";
     const maxProducts = 5;

@@ -33,7 +33,7 @@ test.describe('AdvancedMC Product Search - Suite 1.3', () => {
     await tag('Xeon-E-2276ME');
     await tag('Industrial');
     await tag('Rugged');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "We need an AdvancedMC module with an Intel Xeon E-2276ME (or similar recent Xeon), good for industrial or defense applications, and supporting standard AMC form factor.";
     const maxProducts = 5;

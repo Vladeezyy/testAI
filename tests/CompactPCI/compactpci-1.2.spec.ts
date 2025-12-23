@@ -35,7 +35,7 @@ test.describe('CompactPCI Product Search - Suite 1.2', () => {
     await tag('USB');
     await tag('SATA');
     await tag('Ethernet');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "We're putting together a 4U CompactPCI Serial rack with 9 slots and want the standard high-speed backplane (PCIe/USB/SATA/Ethernet). What backplane should we use?";
     const maxProducts = 5;

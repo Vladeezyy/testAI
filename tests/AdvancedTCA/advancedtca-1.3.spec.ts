@@ -33,7 +33,7 @@ test.describe('AdvancedTCA Product Search - Suite 1.3', () => {
     await tag('40Gbps');
     await tag('Fabric-Backplane');
     await tag('High-Speed');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for an AdvancedTCA chassis that supports a high-speed fabric backplane (40Gbps or so), with room for several blades and RTMs. What do you have available?";
     const maxProducts = 5;

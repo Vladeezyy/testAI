@@ -33,7 +33,7 @@ test.describe('AdvancedMC Product Search - Suite 2.3', () => {
     await tag('Rugged');
     await tag('Mil-Aero');
     await tag('Conduction-Cooled');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "We're building a rugged MicroTCA system for Mil/Aero use. Need an AdvancedMC card that can handle extended temperature, possibly conduction-cooled, and meets relevant MIL standards.";
     const maxProducts = 5;

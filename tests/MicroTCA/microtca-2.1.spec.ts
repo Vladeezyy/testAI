@@ -33,7 +33,7 @@ test.describe('MicroTCA Product Search - Suite 2.1', () => {
     await tag('Chassis');
     await tag('Compact');
     await tag('Affordable');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hi, I'm after a small 19-inch rack MicroTCA chassis for a compact compute platform — something affordable but still good for multiple CPU or I/O boards. What do you suggest?";
     const maxProducts = 5;

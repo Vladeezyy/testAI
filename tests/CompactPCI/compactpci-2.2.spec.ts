@@ -35,7 +35,7 @@ test.describe('CompactPCI Product Search - Suite 2.2', () => {
     await tag('Rugged');
     await tag('Transportation');
     await tag('Rail');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "We need a CompactPCI Serial storage expansion board for multiple M.2 NVMe drives — ideally something rugged enough for transportation or rail-type environments. Any options?";
     const maxProducts = 5;

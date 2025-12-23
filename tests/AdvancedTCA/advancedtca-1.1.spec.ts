@@ -33,7 +33,7 @@ test.describe('AdvancedTCA Product Search - Suite 1.1', () => {
     await tag('PICMG-3.0');
     await tag('NEBS');
     await tag('Redundant-PSU');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "I need a compact 3U 19-inch AdvancedTCA chassis with 2 ATCA slots and RTM support, compliant with PICMG 3.0 / NEBS, and using redundant AC PSUs (around 2.2kW total, N+1).";
     const maxProducts = 5;

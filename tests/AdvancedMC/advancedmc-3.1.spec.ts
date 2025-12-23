@@ -33,7 +33,7 @@ test.describe('AdvancedMC Product Search - Suite 3.1', () => {
     await tag('FPGA');
     await tag('zQSFP+');
     await tag('100G');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hey, I'm looking for an AdvancedMC module with an FPGA (like a Xilinx Ultrascale) and front-panel zQSFP+ ports for 100G networking. Ideally supports PCIe Gen3/4 to the backplane.";
     const maxProducts = 5;

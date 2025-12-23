@@ -33,7 +33,7 @@ test.describe('AdvancedMC Product Search - Suite 2.2', () => {
     await tag('Shelf-Manager');
     await tag('IPMI');
     await tag('Management');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for a shelf manager module (or AdvancedMC manager card) that fits into a MicroTCA/ATCA system to handle IPMI, sensor monitoring, and hot-swap control.";
     const maxProducts = 5;

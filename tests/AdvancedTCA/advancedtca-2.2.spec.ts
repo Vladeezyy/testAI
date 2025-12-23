@@ -33,7 +33,7 @@ test.describe('AdvancedTCA Product Search - Suite 2.2', () => {
     await tag('Telecom');
     await tag('Platform');
     await tag('High-Performance');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "I'm after an AdvancedTCA-based telecom platform for network processing and control plane tasks. Prefer something with decent CPU/FPGA resources and carrier-grade reliability.";
     const maxProducts = 5;

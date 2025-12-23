@@ -35,7 +35,7 @@ test.describe('MicroTCA Product Search - Suite 1.3', () => {
     await tag('24Gbps');
     await tag('Hot-Plug');
     await tag('Press-Fit');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Need Samtec MicroTCA edge card connectors compliant with MicroTCA architecture, accepting 1.60 mm (.062\") cards, press-fit tails, hot-plug capable, supporting high-speed serial up to 12.0 GHz / 24 Gbps, with up to ~170 I/Os.";
     const maxProducts = 5;

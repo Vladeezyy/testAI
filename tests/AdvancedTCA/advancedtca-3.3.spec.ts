@@ -35,7 +35,7 @@ test.describe('AdvancedTCA Product Search - Suite 3.3', () => {
     await tag('10GbE');
     await tag('GbE');
     await tag('IPMI');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for an ATCA I/O expansion Rear Transition Module (ARTM) compatible with standard ATCA carriers, providing PCIe x8 rear access (iPASS), multiple GbE rear ports (SFP + RJ-45), dual 10GbE via Zone 3 with rear SFP+, and rear management I/O including RS-232 and RTM IPMI.";
     const maxProducts = 5;

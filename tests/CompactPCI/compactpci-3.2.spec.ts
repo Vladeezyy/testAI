@@ -36,7 +36,7 @@ test.describe('CompactPCI Product Search - Suite 3.2', () => {
     await tag('USB-3');
     await tag('RS-232');
     await tag('RS-485');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "We're working on a rail/industrial CompactPCI Serial system and need a rugged I/O expansion card with a few USB 3 ports, some RS-232/RS-485 style serial lines, and maybe an NVMe boot drive option. Anything fit?";
     const maxProducts = 5;

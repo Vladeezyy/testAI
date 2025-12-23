@@ -33,7 +33,7 @@ test.describe('CompactPCI Product Search - Suite 1.1', () => {
     await tag('Backplane');
     await tag('9-Slot');
     await tag('4U');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Hi, I need a backplane for a CompactPCI Serial chassis — the Comtel 9-slot 4U one. Do you have the matching backplane for that system?";
     const maxProducts = 5;

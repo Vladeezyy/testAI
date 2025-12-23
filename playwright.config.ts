@@ -45,7 +45,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://www.picmg.org/',
     trace: 'retain-on-failure',  // Keep traces for failed tests
-    screenshot: 'only-on-failure',  // Screenshots on failure
+    screenshot: 'off',  // Disabled - using custom full-page screenshots in fixtures
     video: 'retain-on-failure',  // Keep videos only for failed tests
     headless: true,
     viewport: { width: 1920, height: 1080 },  // Full HD for all tests

@@ -35,7 +35,7 @@ test.describe('CompactPCI Product Search - Suite 2.3', () => {
     await tag('PCIe-NVMe');
     await tag('EN50155');
     await tag('Rugged-Transport');
-    await owner('QA Team');
+    await owner('Vladyslav');
     
     const searchPrompt = "Looking for a 3U CompactPCI Serial peripheral/carrier board compliant with PICMG CPCI-S.0 R2.0 and PCI-SIG M.2 PCIe/NVMe spec, supporting up to quad M.2 PCIe/NVMe SSD modules, and designed to meet EN50155 / EN50121-3-2 / EN50121-4 rugged transport standards.";
     const maxProducts = 5;
