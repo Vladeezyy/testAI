@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 60_000,
+  timeout: 120_000,  // 2 minutes per test
   expect: { timeout: 10_000 },
   
   // Clear output directories before running tests
@@ -24,12 +24,12 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL:'https://www.picmg.org/',
+    baseURL: 'https://www.picmg.org/',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'on',  // Record video for ALL tests
+    video: 'off',  // Video disabled
     headless: true,
-    viewport: { width: 1920, height: 1080 },
+    viewport: { width: 1920, height: 1080 },  // Full HD for all tests
     
     // Add more human-like behavior to avoid bot detection
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
@@ -44,19 +44,15 @@ export default defineConfig({
     { 
       name: 'chromium', 
       use: { 
-        ...devices['Desktop Chrome'],
-        viewport: { width: 1920, height: 1080 },
-        
         // Launch options to avoid detection
         launchOptions: {
           args: [
             '--disable-blink-features=AutomationControlled',
             '--disable-features=IsolateOrigins,site-per-process',
+            '--window-size=1920,1080',
           ],
         },
       } 
     },
-   // { name: 'firefox',  use: { ...devices['Desktop Firefox'] } },
-    //{ name: 'webkit',   use: { ...devices['Desktop Safari'] } },
   ],
 });

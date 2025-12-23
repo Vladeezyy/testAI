@@ -116,7 +116,7 @@ jobs:
         EOF
         
         # Add current report first
-        echo "<li class='report-item current'><a href='index.html'>🟢 Latest Report (Run #${RUN_NUMBER})<span class='badge badge-current'>CURRENT</span></a><br><small style='color: rgba(255,255,255,0.8);'>Generated: ${TIMESTAMP}</small></li>" >> docs/index.html
+        echo "<li class='report-item current'><a href='widgets/summary.html'>🟢 Latest Report (Run #${RUN_NUMBER})<span class='badge badge-current'>CURRENT</span></a><br><small style='color: rgba(255,255,255,0.8);'>Generated: ${TIMESTAMP}</small></li>" >> docs/index.html
         
         # Add links to archived reports
         cd docs/reports
