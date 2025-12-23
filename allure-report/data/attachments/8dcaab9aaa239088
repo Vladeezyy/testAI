@@ -1,0 +1,25 @@
+# Test Report
+
+## Prompt
+Looking for Advantech Netarium ATCA reference systems, especially the Netarium-14, with 40GbE backplane/switching, carrier-grade chassis (cooling, power, shelf management) and 5-NINES availability, optimized for high-density packet processing use cases like policy/charging, network security, real-time traffic monitoring, load balancing, and analytics.
+
+## Summary
+
+- **Total Results**: 3
+- **✅ Suitable Products (AdvancedMC)**: 1
+- **⚠️ Unsuitable Products**: 2
+- **⭐ Original Product Found**: No
+
+## ⚠️ Warnings
+
+⚠️ WARNING: Product #2 "AMC-4201" has category "AdvancedMC" (Expected: AdvancedTCA)
+
+⚠️ WARNING: Product #3 "MIC-5212" has category "AdvancedMC" (Expected: AdvancedTCA)
+
+## Product Details
+
+| # | Product Name | Manufacturer | Category | Subcategory | More Info |
+|---|--------------|--------------|----------|-------------|-----------|
+| 1 | DSPA-8901 | ADVANTECH | AdvancedTCA | ATCA Board - Processor | [🔗 View Product](https://www.picmg.org/spec-product/dspa-8901/) |
+| 2 | AMC-4201 | ADVANTECH | AdvancedMC | AMC - Processor Modules | [🔗 View Product](https://www.picmg.org/spec-product/amc-4201/) |
+| 3 | MIC-5212 | ADVANTECH | AdvancedMC | AMC - I/O | [🔗 View Product](https://www.picmg.org/spec-product/mic-5212/) |

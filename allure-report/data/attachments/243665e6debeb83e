@@ -1,0 +1,46 @@
+# 📈 TEST RESULTS SUMMARY - TC3
+
+## ⏱️ Performance Metrics
+- **Response Latency:** 11.38 seconds ✅ (Normal)
+
+## 📝 Search Query
+```
+Looking for an AdvancedMC board built on Intel Xeon E-2276ME (6 cores). It should be suitable for high-performance computing and offer flexible fabric options like PCI Express or RapidIO.
+```
+
+## 🎯 Search Requirements
+- **Processor:** Intel Xeon E-2276ME (6 cores)
+- **Purpose:** High-performance computing
+- **Fabric Options:** PCI Express or RapidIO
+
+## 📊 Results Breakdown
+- **Total Products Found:** 3
+- **✅ Suitable Products (AdvancedMC):** 1
+- **⚠️ Unsuitable Products:** 2
+- **⭐ Original Product Found:** No
+
+## ⚠️ Warnings
+- ⚠️ WARNING: Product #1 "AT8050" has category "AdvancedTCA" (Expected: AdvancedMC)
+- ⚠️ WARNING: Product #2 "CONGA-B7XD" has category "COM Express®" (Expected: AdvancedMC)
+
+## 📦 Product Details
+
+### 1. AT8050
+- **Manufacturer:** KONTRON
+- **Category:** AdvancedTCA ⚠️
+- **Subcategory:** ATCA Boards - Processors
+- **Product Link:** [🔗 View Product Page](https://www.picmg.org/spec-product/at8050-er-2/)
+
+
+### 2. CONGA-B7XD
+- **Manufacturer:** CONGATEC
+- **Category:** COM Express® ⚠️
+- **Subcategory:** COM Express - Type 7, Basic
+- **Product Link:** [🔗 View Product Page](https://www.picmg.org/spec-product/conga-b7xd/)
+
+
+### 3. AM5030
+- **Manufacturer:** KONTRON
+- **Category:** AdvancedMC ✅
+- **Subcategory:** —
+- **Product Link:** [🔗 View Product Page](https://www.picmg.org/spec-product/am5030/)

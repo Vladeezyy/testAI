@@ -1,0 +1,27 @@
+# Test Report
+
+## Prompt
+Looking for an AMC.1/AMC.2/AMC.4 compliant module that combines a reconfigurable FPGA with an on-board quad-core P2040 processor, plus a PCIe x4 link to the FPGA and high-speed front-panel networking
+
+## Summary
+
+- **Total Results**: 3
+- **✅ Suitable Products (AdvancedMC)**: 0
+- **⚠️ Unsuitable Products**: 3
+- **⭐ Original Product Found**: No
+
+## ⚠️ Warnings
+
+⚠️ WARNING: Product #1 "CONGA-TS97" has category "COM Express" (Expected: AdvancedMC)
+
+⚠️ WARNING: Product #2 "CP6005" has category "CP6005" (Expected: AdvancedMC)
+
+⚠️ WARNING: Product #3 "CP32107" has category "cPCI Board" (Expected: AdvancedMC)
+
+## Product Details
+
+| # | Product Name | Manufacturer | Category | Subcategory | More Info |
+|---|--------------|--------------|----------|-------------|-----------|
+| 1 | CONGA-TS97 | CONGATEC | COM Express | — | [🔗 View Product](https://www.picmg.org/spec-product/conga-ts97/) |
+| 2 | CP6005 | AAEON TECHNOLOGY | CP6005 | Serial Boards - 3U Processors | [🔗 View Product](https://www.picmg.org/spec-product/3u-compactpci-serial-4th5th-generation-intel-core-processor-blade-with-ecc-cpci-a3515-5/) |
+| 3 | CP32107 | BEIJING LINKEDHOPE INTELLIGENT TECHNOLOGIES | cPCI Board | 3U Processor | [🔗 View Product](https://www.picmg.org/spec-product/cpci-sbc-based-on-intel-4th-gen-core-i7-processor-cp32107/) |

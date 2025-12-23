@@ -1,0 +1,5 @@
+Product: ATCA-7310
+Manufacturer: ADVANTECH
+Category: ATCA Board
+Subcategory: Processor
+More Info: https://www.picmg.org/spec-product/atca-7310-dual-cn6880-atca-node-blade-with-40gbe-switch/

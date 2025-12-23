@@ -1,0 +1,5 @@
+Product: AT8050
+Manufacturer: KONTRON
+Category: AdvancedTCA
+Subcategory: ATCA Boards - Processors
+More Info: https://www.picmg.org/spec-product/at8050-er-2/

@@ -1,0 +1,254 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+**Test Objective:** Search for compact 3U AdvancedTCA chassis with PICMG 3.0/NEBS compliance
+
+**Search Query:**
+I need a compact 3U 19-inch AdvancedTCA chassis with 2 ATCA slots and RTM support, compliant with PICMG 3.0 / NEBS, and using redundant AC PSUs (around 2.2kW total, N+1).
+
+**Requirements:**
+- 3U 19-inch form factor
+- 2 ATCA slots with RTM support
+- PICMG 3.0 / NEBS compliant
+- Redundant AC PSUs (~2.2kW total, N+1)
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedTCA
+- Generate detailed report with warnings for non-matching categories
+    ","30876","TC1.1: Search for compact 3U ATCA chassis with 2 slots and RTM support","chromium","2025-12-23","passed","2025-12-23","AdvancedTCA Product Search - Suite 1.1","AdvancedTCA/advancedtca-1.1.spec.ts","",""
+"
+**Test Objective:** Search for reconfigurable FPGA AMC boards with 100G I/O and large DDR3 buffering
+
+**Search Query:**
+Do you have a reconfigurable FPGA-based AMC board that offers 100G-class I/O and large DDR3 buffering (multiple channels totaling around 4GB) for high-speed data processing?
+
+**Requirements:**
+- Reconfigurable FPGA-based AMC board
+- 100G-class I/O
+- Large DDR3 buffering (multiple channels, ~4GB total)
+- High-speed data processing capability
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedMC
+- Generate detailed report with warnings for non-matching categories
+    ","30713","TC3.2: Search for reconfigurable FPGA AMC with 100G I/O and DDR3 buffering","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 3.2","AdvancedMC/advancedmc-3.2.spec.ts","",""
+"
+**Test Objective:** Search for MicroTCA 1U enclosures with PCIe Gen3 support
+
+**Search Query:**
+I'm looking for a rugged 1U MicroTCA chassis for Mil/Aero, designed to handle shock and vibration, with around 6 mid-size AMC slots and redundant hot-swappable PSUs
+
+**Requirements:**
+- MicroTCA 1U enclosure
+- PCIe Gen3 to each AMC slot (dual x4 or single x8)
+- Adjacent-slot backplane connections
+- Dual redundant rear hot-swap PSUs
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: MicroTCA
+- Generate detailed report with warnings for non-matching categories
+    ","26549","TC2.3: Search for rugged MicroTCA chassis for Mil/Aero","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 2.3","AdvancedMC/advancedmc-2.3.spec.ts","",""
+"
+**Test Objective:** Search for AMC FPGA modules with dual zQSFP+ and 100G Ethernet support
+
+**Search Query:**
+Hi, I need an AMC FPGA module with dual zQSFP+ front-panel connectors supporting 100G Ethernet (one port at 100G and another up to ~40G). What matches that?
+
+**Requirements:**
+- AMC FPGA module
+- Dual zQSFP+ front-panel connectors
+- 100G Ethernet support (one port 100G, another ~40G)
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedMC
+- Generate detailed report with warnings for non-matching categories
+    ","30343","TC3.1: Search for AMC FPGA module with dual zQSFP+ 100G Ethernet","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 3.1","AdvancedMC/advancedmc-3.1.spec.ts","",""
+"
+**Test Objective:** Search for carrier-grade ATCA systems for heavy network workloads
+
+**Search Query:**
+Hey, I am looking for a carrier-grade ATCA system that can handle really heavy network workloads — like security and deep packet processing — and scale way beyond normal rack servers. What systems do you have?
+
+**Requirements:**
+- Carrier-grade ATCA system
+- Heavy network workload handling
+- Security and deep packet processing (DPI)
+- Scalability beyond normal rack servers
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedTCA
+- Generate detailed report with warnings for non-matching categories
+    ","30806","TC2.1: Search for carrier-grade ATCA for network workloads and packet processing","chromium","2025-12-23","passed","2025-12-23","AdvancedTCA Product Search - Suite 2.1","AdvancedTCA/advancedtca-2.1.spec.ts","",""
+"
+**Test Objective:** Search for AdvancedMC boards with Intel Xeon E-2276ME processor
+
+**Search Query:**
+Looking for an AdvancedMC board built on Intel Xeon E-2276ME (6 cores). It should be suitable for high-performance computing and offer flexible fabric options like PCI Express or RapidIO.
+
+**Requirements:**
+- Intel Xeon E-2276ME processor (6 cores)
+- High-performance computing capability
+- Flexible fabric options (PCIe or RapidIO)
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedMC
+- Generate detailed report with warnings for non-matching categories
+    ","34872","TC3: Search for AdvancedMC board with Intel Xeon E-2276ME and flexible fabric options","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 1.3","AdvancedMC/advancedmc-1.3.spec.ts","",""
+"
+**Test Objective:** Search for AMC compliant modules with FPGA, P2040 processor, and high-speed networking
+
+**Search Query:**
+Looking for an AMC.1/AMC.2/AMC.4 compliant module that combines a reconfigurable FPGA with an on-board quad-core P2040 processor, plus a PCIe x4 link to the FPGA and high-speed front-panel networking
+
+**Requirements:**
+- AMC.1/AMC.2/AMC.4 compliant
+- Reconfigurable FPGA
+- On-board quad-core P2040 processor
+- PCIe x4 link to FPGA
+- High-speed front-panel networking
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedMC
+- Generate detailed report with warnings for non-matching categories
+    ","36428","TC3.3: Search for AMC with FPGA, P2040 processor, and PCIe x4 link","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 3.3","AdvancedMC/advancedmc-3.3.spec.ts","",""
+"
+**Test Objective:** Search for 2-slot AdvancedTCA chassis with advanced backplane topology
+
+**Search Query:**
+Looking for a 19"" 3U 2-slot AdvancedTCA chassis (PICMG 3.0 / NEBS-ready), supporting 2 ATCA front boards + RTMs, redundant AC PSUs (~2.2kW total, N+1), push-pull hot-swap fan trays, and a 40Gbps backplane with Dual Star / Full Mesh topology options.
+
+**Requirements:**
+- 19"" 3U form factor
+- 2-slot ATCA chassis (PICMG 3.0 / NEBS-ready)
+- 2 ATCA front boards + RTMs support
+- Redundant AC PSUs (~2.2kW total, N+1)
+- Push-pull hot-swap fan trays
+- 40Gbps backplane with Dual Star / Full Mesh topology
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedTCA
+- Generate detailed report with warnings for non-matching categories
+    ","35925","TC1.3: Search for 2-slot ATCA chassis with 40Gbps backplane and mesh topology","chromium","2025-12-23","passed","2025-12-23","AdvancedTCA Product Search - Suite 1.3","AdvancedTCA/advancedtca-1.3.spec.ts","",""
+"
+**Test Objective:** Search for AdvancedMC Xeon-based CPU boards with specific memory and networking requirements
+
+**Search Query:**
+Do you have an AdvancedMC Xeon-based CPU board for high-performance workloads, with ECC DDR4 memory (about 16GB) and improved Ethernet via 10G backplane support?
+
+**Requirements:**
+- Xeon-based CPU board
+- ECC DDR4 memory (~16GB)
+- 10G backplane Ethernet support
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedMC
+- Generate detailed report with warnings for non-matching categories
+    ","34403","TC2: Search for AdvancedMC Xeon-based CPU board with ECC DDR4 and 10G Ethernet","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 1.2","AdvancedMC/advancedmc-1.2.spec.ts","",""
+"
+**Test Objective:** Search for high-end telecom/data-com ATCA platforms
+
+**Search Query:**
+We are building a high-end telecom/data-com platform and need something reliable that supports very high bandwidth and lots of processing cores. Ideally an ATCA solution made for 24/7 network traffic. Any good options?
+
+**Requirements:**
+- High-end telecom/data-com platform
+- Reliable for 24/7 operation
+- Very high bandwidth support
+- Lots of processing cores
+- ATCA solution for network traffic
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedTCA
+- Generate detailed report with warnings for non-matching categories
+    ","31404","TC2.2: Search for high-end telecom ATCA platform with high bandwidth","chromium","2025-12-23","passed","2025-12-23","AdvancedTCA Product Search - Suite 2.2","AdvancedTCA/advancedtca-2.2.spec.ts","",""
+"
+**Test Objective:** Search for MicroTCA 1U enclosures with PCIe Gen3 support
+
+**Search Query:**
+Need a MicroTCA 1U enclosure providing PCIe Gen3 to each AMC slot (dual x4 or single x8), with adjacent-slot backplane connections and dual redundant rear hot-swap PSUs
+
+**Requirements:**
+- MicroTCA 1U enclosure
+- PCIe Gen3 to each AMC slot (dual x4 or single x8)
+- Adjacent-slot backplane connections
+- Dual redundant rear hot-swap PSUs
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: MicroTCA
+- Generate detailed report with warnings for non-matching categories
+    ","30009","TC2.1: Search for MicroTCA 1U enclosure with PCIe Gen3","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 2.1","AdvancedMC/advancedmc-2.1.spec.ts","",""
+"
+**Test Objective:** Search for short 3U ATCA chassis with strong cooling and redundant power
+
+**Search Query:**
+I need a short 3U rack chassis for an ATCA setup — only two slots — but with strong cooling and redundant power since it will run non-stop. Anything like that?
+
+**Requirements:**
+- Short 3U rack chassis
+- ATCA setup with 2 slots
+- Strong cooling capability
+- Redundant power for continuous operation
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedTCA
+- Generate detailed report with warnings for non-matching categories
+    ","29659","TC1.2: Search for short 3U ATCA chassis with strong cooling and redundant power","chromium","2025-12-23","passed","2025-12-23","AdvancedTCA Product Search - Suite 1.2","AdvancedTCA/advancedtca-1.2.spec.ts","",""
+"
+**Test Objective:** Search for AdvancedMC processor boards using BoardBot
+
+**Search Query:**
+Hi, I need an AdvancedMC processor board with a 6-core Intel Xeon (around 2.8GHz base) for high-performance applications. Prefer something that can work with PCIe or RapidIO fabrics.
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedMC
+- Generate detailed report with warnings for non-matching categories
+    ","35774","TC1: Search for AdvancedMC processor board with 6-core Intel Xeon","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 1.1","AdvancedMC/advancedmc-1.1.spec.ts","",""
+"
+**Test Objective:** Search for MicroTCA 1U enclosures with PCIe Gen3 support
+
+**Search Query:**
+Do you have a front-to-rear cooled 1U chassis with 6 AMC slots and a modern shelf manager/MCH that supports things like GPS, IEEE1588, SyncE, or NTP, plus low-jitter clocking?
+
+**Requirements:**
+- MicroTCA 1U enclosure
+- PCIe Gen3 to each AMC slot (dual x4 or single x8)
+- Adjacent-slot backplane connections
+- Dual redundant rear hot-swap PSUs
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: MicroTCA
+- Generate detailed report with warnings for non-matching categories
+    ","31356","TC2.2: Search for front-to-rear cooled 1U chassis with modern shelf manager","chromium","2025-12-23","passed","2025-12-23","AdvancedMC Product Search - Suite 2.2","AdvancedMC/advancedmc-2.2.spec.ts","",""
+"
+**Test Objective:** Search for Advantech Netarium-14 ATCA reference systems
+
+**Search Query:**
+Looking for Advantech Netarium ATCA reference systems, especially the Netarium-14, with 40GbE backplane/switching, carrier-grade chassis (cooling, power, shelf management) and 5-NINES availability, optimized for high-density packet processing use cases like policy/charging, network security, real-time traffic monitoring, load balancing, and analytics.
+
+**Requirements:**
+- Advantech Netarium ATCA reference systems
+- Netarium-14 specific model
+- 40GbE backplane/switching
+- Carrier-grade chassis (cooling, power, shelf management)
+- 5-NINES availability
+- High-density packet processing
+- Use cases: policy/charging, network security, traffic monitoring, load balancing, analytics
+
+**Validation:**
+- Extract up to 5 products
+- Verify category matches: AdvancedTCA
+- Generate detailed report with warnings for non-matching categories
+    ","49213","TC2.3: Search for Netarium-14 ATCA with 40GbE and 5-NINES availability","chromium","2025-12-23","passed","2025-12-23","AdvancedTCA Product Search - Suite 2.3","AdvancedTCA/advancedtca-2.3.spec.ts","",""

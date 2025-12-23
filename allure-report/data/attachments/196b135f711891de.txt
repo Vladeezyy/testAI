@@ -1,0 +1,105 @@
+
+📁  Current reports: 7 (will keep up to 100)
+
+✅ Query submitted to BoardBot
+⏱️  Timer started - measuring response time...
+⏳ Waiting up to 20 seconds for results...
+✅ Loading indicator disappeared
+✅ Results table appeared
+✅ Wait complete
+
+⏱️  Response Latency: 12.89 seconds
+
+
+📊 Extracting product information from results table...
+
+📋 Found 3 products in table
+📦 Extracting 3 products (with URLs)...
+
+🔍 Product 1: CONGA-TS97
+   📍 Total cells in row: 7
+   📍 Found button in cell 6: "More Info"
+   ✅ Found More Info button at cell 6
+   🔗 Clicking More Info to extract URL...
+   📍 Current URL before click: https://www.picmg.org/
+   ⏳ Waiting for new tab to open...
+   ✅ URL extracted from new tab: https://www.picmg.org/spec-product/conga-ts97/
+   ✅ New tab closed, back at results
+   ✅ Product 1 extracted
+
+🔍 Product 2: CP6005
+   📍 Total cells in row: 7
+   📍 Found button in cell 6: "More Info"
+   ✅ Found More Info button at cell 6
+   🔗 Clicking More Info to extract URL...
+   📍 Current URL before click: https://www.picmg.org/
+   ⏳ Waiting for new tab to open...
+   ✅ URL extracted from new tab: https://www.picmg.org/spec-product/3u-compactpci-serial-4th5th-generation-intel-core-processor-blade-with-ecc-cpci-a3515-5/
+   ✅ New tab closed, back at results
+   ✅ Product 2 extracted
+
+🔍 Product 3: CP32107
+   📍 Total cells in row: 7
+   📍 Found button in cell 6: "More Info"
+   ✅ Found More Info button at cell 6
+   🔗 Clicking More Info to extract URL...
+   📍 Current URL before click: https://www.picmg.org/
+   ⏳ Waiting for new tab to open...
+   ✅ URL extracted from new tab: https://www.picmg.org/spec-product/cpci-sbc-based-on-intel-4th-gen-core-i7-processor-cp32107/
+   ✅ New tab closed, back at results
+   ✅ Product 3 extracted
+
+✅ Successfully extracted 3 products with URLs
+
+
+✅ Extracted 3 products
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                              TEST REPORT
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📝 Prompt: Looking for an AMC.1/AMC.2/AMC.4 compliant module that combines a reconfigurable FPGA with an on-board quad-core P2040 processor, plus a PCIe x4 link to the FPGA and high-speed front-panel networking
+
+📊 Summary:
+   • Total Results: 3
+   • ✅ Suitable Products (AdvancedMC): 0
+   • ⚠️  Unsuitable Products: 3
+
+⚠️  WARNINGS:
+   ⚠️ WARNING: Product #1 "CONGA-TS97" has category "COM Express" (Expected: AdvancedMC)
+   ⚠️ WARNING: Product #2 "CP6005" has category "CP6005" (Expected: AdvancedMC)
+   ⚠️ WARNING: Product #3 "CP32107" has category "cPCI Board" (Expected: AdvancedMC)
+
+📦 Product Details:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| # | Product Name      | Manufacturer    | Category      | Subcategory   | More Info URL
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| 1  | CONGA-TS97        | CONGATEC        | COM Express   | —             | https://www.picmg.org/spec-product/conga
+| 2  | CP6005            | AAEON TECHNOLOG | CP6005        | Serial Boards | https://www.picmg.org/spec-product/3u-co
+| 3  | CP32107           | BEIJING LINKEDH | cPCI Board    | 3U Processor  | https://www.picmg.org/spec-product/cpci-
+────────────────────────────────────────────────────────────────────────────────────────────────────
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+
+📄 Report saved to: /home/runner/work/testAI/testAI/test-results/reports/AdvancedMC_TC3.3_2025-12-23T09-44-54-803Z.md
+
+✅ Found 3 total products
+✅ Suitable (AdvancedMC): 0
+Product 1: CONGA-TS97
+  - Manufacturer: CONGATEC
+  - Category: COM Express
+  - Subcategory: —
+  - URL: https://www.picmg.org/spec-product/conga-ts97/
+Product 2: CP6005
+  - Manufacturer: AAEON TECHNOLOGY
+  - Category: CP6005
+  - Subcategory: Serial Boards - 3U Processors
+  - URL: https://www.picmg.org/spec-product/3u-compactpci-serial-4th5th-generation-intel-core-processor-blade-with-ecc-cpci-a3515-5/
+Product 3: CP32107
+  - Manufacturer: BEIJING LINKEDHOPE INTELLIGENT TECHNOLOGIES
+  - Category: cPCI Board
+  - Subcategory: 3U Processor
+  - URL: https://www.picmg.org/spec-product/cpci-sbc-based-on-intel-4th-gen-core-i7-processor-cp32107/
+🎥 Video saved at: /home/runner/work/testAI/testAI/test-results/artifacts/.playwright-artifacts-1/05154f28c8581cf7a0844ab5a23d6f6e.webm
+✅ Video attached to Allure report
