@@ -1,1 +1,0 @@
-Hi, I need an AMC FPGA module with dual zQSFP+ front-panel connectors supporting 100G Ethernet (one port at 100G and another up to ~40G). What matches that?

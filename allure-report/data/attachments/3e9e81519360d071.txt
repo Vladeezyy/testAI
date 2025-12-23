@@ -1,1 +1,0 @@
-Need a MicroTCA 1U enclosure providing PCIe Gen3 to each AMC slot (dual x4 or single x8), with adjacent-slot backplane connections and dual redundant rear hot-swap PSUs

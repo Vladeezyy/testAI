@@ -1,5 +1,0 @@
-Product: AM5030
-Manufacturer: KONTRON
-Category: AdvancedMC
-Subcategory: —
-More Info: https://www.picmg.org/spec-product/am5030/

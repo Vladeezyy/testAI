@@ -1,5 +1,0 @@
-Product: MIC-5212
-Manufacturer: ADVANTECH
-Category: AdvancedMC
-Subcategory: AMC - I/O
-More Info: https://www.picmg.org/spec-product/mic-5212/

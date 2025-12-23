@@ -1,5 +1,0 @@
-Product: VT951
-Manufacturer: VADATECH INC
-Category: AdvancedMC
-Subcategory: MTCA.3/Rugged MIL Chassis
-More Info: https://www.picmg.org/spec-product/vt951/

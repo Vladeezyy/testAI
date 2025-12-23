@@ -1,1 +1,0 @@
-Looking for a 19" 3U 2-slot AdvancedTCA chassis (PICMG 3.0 / NEBS-ready), supporting 2 ATCA front boards + RTMs, redundant AC PSUs (~2.2kW total, N+1), push-pull hot-swap fan trays, and a 40Gbps backplane with Dual Star / Full Mesh topology options.

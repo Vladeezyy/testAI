@@ -1,5 +1,0 @@
-Product: AMC-4201
-Manufacturer: ADVANTECH
-Category: AdvancedMC
-Subcategory: AMC - Processor Modules
-More Info: https://www.picmg.org/spec-product/amc-4201/

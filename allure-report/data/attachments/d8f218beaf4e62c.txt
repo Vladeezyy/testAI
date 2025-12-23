@@ -1,1 +1,0 @@
-I'm looking for a rugged 1U MicroTCA chassis for Mil/Aero, designed to handle shock and vibration, with around 6 mid-size AMC slots and redundant hot-swappable PSUs

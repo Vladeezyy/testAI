@@ -1,5 +1,0 @@
-Product: MIC-5342
-Manufacturer: ADVANTECH
-Category: AdvancedTCA
-Subcategory: ATCA Boards - Processors
-More Info: https://www.picmg.org/spec-product/mic-5342-atca-dual-socket-cpu-blade-with-intel-xeon-e5-2600-v3v4-series-processors-for-telecom-applications/

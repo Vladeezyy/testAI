@@ -1,5 +1,0 @@
-Product: CONGA-B7XD
-Manufacturer: CONGATEC
-Category: COM Express®
-Subcategory: COM Express - Type 7, Basic
-More Info: https://www.picmg.org/spec-product/conga-b7xd/

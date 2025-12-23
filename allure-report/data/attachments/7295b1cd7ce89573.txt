@@ -1,5 +1,0 @@
-Product: CONGA-TS97
-Manufacturer: CONGATEC
-Category: COM Express
-Subcategory: —
-More Info: https://www.picmg.org/spec-product/conga-ts97/

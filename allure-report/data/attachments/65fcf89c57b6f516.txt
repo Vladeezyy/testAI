@@ -1,1 +1,0 @@
-Looking for Advantech Netarium ATCA reference systems, especially the Netarium-14, with 40GbE backplane/switching, carrier-grade chassis (cooling, power, shelf management) and 5-NINES availability, optimized for high-density packet processing use cases like policy/charging, network security, real-time traffic monitoring, load balancing, and analytics.

@@ -1,1 +1,0 @@
-We are building a high-end telecom/data-com platform and need something reliable that supports very high bandwidth and lots of processing cores. Ideally an ATCA solution made for 24/7 network traffic. Any good options?
