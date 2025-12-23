@@ -1,0 +1,45 @@
+
+📁  Current reports: 2 (will keep up to 100)
+
+✅ Query submitted to BoardBot
+⏱️  Timer started - measuring response time...
+⏳ Waiting up to 20 seconds for results...
+✅ Loading indicator disappeared
+⚠️  Results table did not appear
+✅ Wait complete
+
+⏱️  Response Latency: 15.84 seconds
+
+
+📊 Extracting product information from results table...
+
+⚠️  No results table found
+
+⚠️  No products extracted
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                              TEST REPORT
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📝 Prompt: Need a MicroTCA 1U enclosure providing PCIe Gen3 to each AMC slot (dual x4 or single x8), with adjacent-slot backplane connections and dual redundant rear hot-swap PSUs
+
+📊 Summary:
+   • Total Results: 0
+   • ✅ Suitable Products (AdvancedMC): 0
+   • ⚠️  Unsuitable Products: 0
+
+📦 Product Details:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| # | Product Name      | Manufacturer    | Category      | Subcategory   | More Info URL
+────────────────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+
+📄 Report saved to: /home/runner/work/testAI/testAI/test-results/reports/MicroTCA_TC2.1_2025-12-23T09-55-59-079Z.md
+
+⚠️  No products found in results
+⚠️  No products to validate
+🎥 Video saved at: /home/runner/work/testAI/testAI/test-results/artifacts/.playwright-artifacts-1/fb74143723fc70b3c01563c11ee83c4c.webm
+✅ Video attached to Allure report

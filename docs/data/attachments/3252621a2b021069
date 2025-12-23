@@ -1,0 +1,23 @@
+# Test Report
+
+## Prompt
+I'm looking for a rugged 1U MicroTCA chassis for Mil/Aero, designed to handle shock and vibration, with around 6 mid-size AMC slots and redundant hot-swappable PSUs
+
+## Summary
+
+- **Total Results**: 1
+- **✅ Suitable Products (AdvancedMC)**: 0
+- **⚠️ Unsuitable Products**: 1
+- **⭐ Original Product Found**: Yes (Product #1)
+
+## ⚠️ Warnings
+
+⚠️ WARNING: Product #1 "VT951" has category "AdvancedMC" (Expected: MicroTCA)
+
+## Product Details
+
+| # | Product Name | Manufacturer | Category | Subcategory | More Info |
+|---|--------------|--------------|----------|-------------|-----------|
+| 1 | ⭐ VT951 | VADATECH INC | AdvancedMC | MTCA.3/Rugged MIL Chassis | [🔗 View Product](https://www.picmg.org/spec-product/vt951/) |
+
+⭐ = Original product that inspired this search

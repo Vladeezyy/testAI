@@ -1,0 +1,45 @@
+
+📁  Current reports: 8 (will keep up to 100)
+
+✅ Query submitted to BoardBot
+⏱️  Timer started - measuring response time...
+⏳ Waiting up to 20 seconds for results...
+✅ Loading indicator disappeared
+⚠️  Results table did not appear
+✅ Wait complete
+
+⏱️  Response Latency: 14.85 seconds
+
+
+📊 Extracting product information from results table...
+
+⚠️  No results table found
+
+⚠️  No products extracted
+
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+                              TEST REPORT
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+📝 Prompt: I need a compact 3U 19-inch AdvancedTCA chassis with 2 ATCA slots and RTM support, compliant with PICMG 3.0 / NEBS, and using redundant AC PSUs (around 2.2kW total, N+1).
+
+📊 Summary:
+   • Total Results: 0
+   • ✅ Suitable Products (AdvancedMC): 0
+   • ⚠️  Unsuitable Products: 0
+
+📦 Product Details:
+────────────────────────────────────────────────────────────────────────────────────────────────────
+| # | Product Name      | Manufacturer    | Category      | Subcategory   | More Info URL
+────────────────────────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+
+📄 Report saved to: /home/runner/work/testAI/testAI/test-results/reports/AdvancedTCA_TC1.1_2025-12-23T09-57-36-544Z.md
+
+⚠️  No products found in results
+⚠️  No products to validate
+🎥 Video saved at: /home/runner/work/testAI/testAI/test-results/artifacts/.playwright-artifacts-0/cde84eb20d1c376bc7dc16baade86448.webm
+✅ Video attached to Allure report
