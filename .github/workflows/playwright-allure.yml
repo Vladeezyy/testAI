@@ -19,8 +19,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
     
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -37,16 +35,6 @@ jobs:
       run: npm test
       continue-on-error: true
       
-    - name: Download previous reports
-      continue-on-error: true
-      run: |
-        # Try to download the gh-pages branch
-        git fetch origin gh-pages:gh-pages || echo "No gh-pages branch yet"
-        if git rev-parse --verify gh-pages >/dev/null 2>&1; then
-          git checkout gh-pages -- reports/ 2>/dev/null || echo "No reports directory yet"
-          git checkout main
-        fi
-      
     - name: Generate Allure Report with History
       if: always()
       run: |
@@ -54,68 +42,92 @@ jobs:
         TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
         RUN_NUMBER="${{ github.run_number }}"
         
-        # Generate current report
+        # Generate report to temp location
         npm run report:allure:generate
         
-        # Create reports directory structure
+        # Create new structure
+        mkdir -p allure-reports/run-${RUN_NUMBER}-${TIMESTAMP}
+        cp -r docs/* allure-reports/run-${RUN_NUMBER}-${TIMESTAMP}/
+        
+        # Remove old docs
+        rm -rf docs
+        
+        # Create fresh docs directory
         mkdir -p docs/reports
         
-        # Move current report to timestamped folder
-        mv docs docs/reports/run-${RUN_NUMBER}-${TIMESTAMP}
+        # Copy current report to docs root (for direct access)
+        cp -r allure-reports/run-${RUN_NUMBER}-${TIMESTAMP}/* docs/
         
-        # Recreate docs folder and copy reports
-        mkdir -p docs
-        cp -r docs/reports/run-${RUN_NUMBER}-${TIMESTAMP}/* docs/
+        # Copy all reports to docs/reports
+        cp -r allure-reports/* docs/reports/
         
         # Keep only last 3 reports
         cd docs/reports
         ls -t | tail -n +4 | xargs -r rm -rf
         cd ../..
         
-        # Create index page linking to all reports
+        # Create index page
         cat > docs/index.html << 'EOF'
         <!DOCTYPE html>
         <html>
         <head>
           <title>Test Reports</title>
           <style>
-            body { font-family: Arial, sans-serif; margin: 40px; }
-            h1 { color: #333; }
+            body { font-family: Arial, sans-serif; margin: 40px; background: #f8f9fa; }
+            .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            h1 { color: #333; margin-bottom: 10px; }
+            .subtitle { color: #666; margin-bottom: 30px; }
             .report-list { list-style: none; padding: 0; }
             .report-item { 
-              margin: 10px 0; 
-              padding: 15px; 
+              margin: 15px 0; 
+              padding: 20px; 
               background: #f5f5f5; 
-              border-radius: 5px;
+              border-radius: 8px;
+              transition: transform 0.2s;
             }
+            .report-item:hover { transform: translateX(5px); }
             .report-item a { 
               color: #0066cc; 
               text-decoration: none; 
               font-size: 18px;
+              font-weight: 500;
             }
             .report-item a:hover { text-decoration: underline; }
-            .current { background: #e8f4f8; border-left: 4px solid #0066cc; }
+            .current { 
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+              color: white;
+            }
+            .current a { color: white; }
+            .badge { 
+              display: inline-block; 
+              padding: 4px 8px; 
+              border-radius: 4px; 
+              font-size: 12px; 
+              margin-left: 10px;
+            }
+            .badge-current { background: rgba(255,255,255,0.3); }
           </style>
         </head>
         <body>
-          <h1>📊 Test Reports</h1>
-          <p>Latest test execution reports (last 3 runs)</p>
-          <ul class="report-list">
+          <div class="container">
+            <h1>📊 Test Reports</h1>
+            <p class="subtitle">Latest test execution reports (last 3 runs)</p>
+            <ul class="report-list">
         EOF
         
-        # Add links to all reports (newest first)
+        # Add current report first
+        echo "<li class='report-item current'><a href='index.html'>🟢 Latest Report (Run #${RUN_NUMBER})<span class='badge badge-current'>CURRENT</span></a><br><small style='color: rgba(255,255,255,0.8);'>Generated: ${TIMESTAMP}</small></li>" >> docs/index.html
+        
+        # Add links to archived reports
         cd docs/reports
-        for dir in $(ls -t); do
-          if [ "$dir" = "run-${RUN_NUMBER}-${TIMESTAMP}" ]; then
-            echo "<li class='report-item current'><a href='reports/$dir/index.html'>🟢 Latest: $dir</a></li>" >> ../index.html
-          else
-            echo "<li class='report-item'><a href='reports/$dir/index.html'>📄 $dir</a></li>" >> ../index.html
-          fi
+        for dir in $(ls -t | head -n 2); do
+          echo "<li class='report-item'><a href='reports/$dir/index.html'>📄 Archive: $dir</a></li>" >> ../index.html
         done
         cd ../..
         
         cat >> docs/index.html << 'EOF'
-          </ul>
+            </ul>
+          </div>
         </body>
         </html>
         EOF
