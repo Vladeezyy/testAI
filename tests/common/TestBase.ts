@@ -105,8 +105,15 @@ export class TestBase {
     boardBotPage: BoardBotPage,
     maxProducts: number
   ): Promise<ProductInfo[]> {
-    const screenshot = await page.screenshot({ fullPage: true });
-    await attachment('Search Results Page', screenshot, { contentType: 'image/png' });
+    // Take screenshot and attach to Allure
+    const screenshot = await page.screenshot({ 
+      fullPage: true,
+      type: 'png'
+    });
+    await attachment('Search Results Page (Full)', screenshot, { 
+      contentType: 'image/png',
+      fileExtension: '.png'
+    });
 
     const products = await boardBotPage.extractProductInfo(maxProducts);
     await parameter('Products Found', products.length.toString());
@@ -122,6 +129,7 @@ export class TestBase {
 
   /**
    * Validate categories and generate comprehensive report
+   * Fails the test if no products found or all products have wrong category
    */
   static async validateAndGenerateReport(
     products: ProductInfo[],
@@ -132,12 +140,24 @@ export class TestBase {
     testDir: string,
     testId: string
   ): Promise<void> {
+    // Generate report first
     const report = ReportGenerator.generateReport(
       searchPrompt,
       products,
       expectedCategory,
       originalProductUrl
     );
+    
+    // Check if test should fail
+    const shouldFail = products.length === 0 || report.suitableProducts === 0;
+    
+    if (shouldFail) {
+      if (products.length === 0) {
+        console.error('\n❌ TEST FAILED: No products found in results\n');
+      } else {
+        console.error(`\n❌ TEST FAILED: No suitable products found (0/${products.length} match expected category: ${expectedCategory})\n`);
+      }
+    }
     
     const originalIndex = report.originalProduct;
     if (originalIndex >= 0) {
@@ -243,6 +263,15 @@ ${report.originalProduct >= 0 ? '\n⭐ = Original product that inspired this sea
       }
     } else {
       console.log(`⚠️  No products found in results`);
+    }
+    
+    // Throw error to fail the test if needed
+    if (shouldFail) {
+      if (products.length === 0) {
+        throw new Error(`❌ TEST FAILED: No products found in search results`);
+      } else {
+        throw new Error(`❌ TEST FAILED: No suitable products found - 0/${products.length} products match expected category "${expectedCategory}". All products: ${products.map(p => `${p.productName} (${p.category})`).join(', ')}`);
+      }
     }
   }
 

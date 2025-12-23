@@ -15,19 +15,38 @@ export default defineConfig({
       outputFolder: 'allure-results',
       detail: true,
       suiteTitle: true,
+      categories: [
+        {
+          name: 'No Products Found',
+          matchedStatuses: ['failed'],
+          messageRegex: '.*No products found.*'
+        },
+        {
+          name: 'Wrong Category',
+          matchedStatuses: ['failed'],
+          messageRegex: '.*No suitable products.*'
+        },
+        {
+          name: 'Bot Detection',
+          matchedStatuses: ['failed'],
+          messageRegex: '.*bot.*detection.*'
+        }
+      ],
       environmentInfo: {
         'Test Environment': 'Production',
         'Browser': 'Chromium',
-        'OS': 'Windows'
+        'OS': process.platform,
+        'Node Version': process.version,
+        'Base URL': 'https://www.picmg.org/'
       }
     }]
   ],
 
   use: {
     baseURL: 'https://www.picmg.org/',
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'off',  // Video disabled
+    trace: 'retain-on-failure',  // Keep traces for failed tests
+    screenshot: 'only-on-failure',  // Screenshots on failure
+    video: 'retain-on-failure',  // Keep videos only for failed tests
     headless: true,
     viewport: { width: 1920, height: 1080 },  // Full HD for all tests
     

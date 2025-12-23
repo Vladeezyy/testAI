@@ -31,6 +31,23 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps chromium
       
+    - name: Download previous report history
+      if: always()
+      continue-on-error: true
+      run: |
+        # Try to download history from previous run
+        mkdir -p allure-results/history
+        
+        # Download from gh-pages branch if exists
+        if git ls-remote --heads origin gh-pages | grep gh-pages; then
+          echo "Downloading history from gh-pages..."
+          git fetch origin gh-pages
+          git checkout origin/gh-pages -- history || echo "No history found"
+          if [ -d "history" ]; then
+            cp -r history/* allure-results/history/ || echo "Failed to copy history"
+          fi
+        fi
+    
     - name: Run Playwright tests
       run: npm test
       continue-on-error: true
@@ -60,6 +77,12 @@ jobs:
         
         # Copy all reports to docs/reports
         cp -r allure-reports/* docs/reports/
+        
+        # Save history for next run
+        mkdir -p docs/history
+        if [ -d "docs/history" ]; then
+          cp -r docs/history/* docs/history/ 2>/dev/null || echo "No history to preserve"
+        fi
         
         # Keep only last 3 reports
         cd docs/reports
@@ -180,8 +203,21 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: test-results
+        name: test-results-${{ github.run_number }}
         path: |
           allure-results/
           test-results/
+          playwright-report/
         retention-days: 30
+        
+    - name: Upload screenshots and videos
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: failure-artifacts-${{ github.run_number }}
+        path: |
+          test-results/**/*.png
+          test-results/**/*.webm
+          test-results/**/trace.zip
+        retention-days: 30
+        if-no-files-found: ignore
