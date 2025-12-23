@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -72,6 +72,9 @@ jobs:
         <html>
         <head>
           <title>Test Reports</title>
+          <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+          <meta http-equiv="Pragma" content="no-cache">
+          <meta http-equiv="Expires" content="0">
           <style>
             body { font-family: Arial, sans-serif; margin: 40px; background: #f8f9fa; }
             .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -118,21 +121,34 @@ jobs:
         # Add current report first
         echo "<li class='report-item current'><a href='widgets/summary.html'>🟢 Latest Report (Run #${RUN_NUMBER})<span class='badge badge-current'>CURRENT</span></a><br><small style='color: rgba(255,255,255,0.8);'>Generated: ${TIMESTAMP}</small></li>" >> docs/index.html
         
-        # Add links to archived reports
-        cd docs/reports
-        for dir in $(ls -t | head -n 2); do
-          echo "<li class='report-item'><a href='reports/$dir/index.html'>📄 Archive: $dir</a></li>" >> ../index.html
-        done
-        cd ../..
+        # Add links to archived reports (if they exist)
+        if [ -d "docs/reports" ] && [ "$(ls -A docs/reports 2>/dev/null)" ]; then
+          cd docs/reports
+          for dir in $(ls -t | head -n 2); do
+            echo "<li class='report-item'><a href='reports/$dir/widgets/summary.html'>📄 Archive: $dir</a></li>" >> ../index.html
+          done
+          cd ../..
+        fi
         
         cat >> docs/index.html << 'EOF'
             </ul>
+            <p style="text-align: center; color: #999; margin-top: 40px; font-size: 14px;">
+              Last updated: <span id="timestamp"></span>
+            </p>
+            <script>
+              document.getElementById('timestamp').textContent = new Date().toLocaleString();
+            </script>
           </div>
         </body>
         </html>
         EOF
         
         touch docs/.nojekyll
+        
+        # Output deployment info
+        echo "📊 Report generated successfully"
+        echo "📁 Files in docs/:"
+        ls -lah docs/
       
     - name: Setup Pages
       if: always()
@@ -148,6 +164,13 @@ jobs:
       if: always()
       id: deployment
       uses: actions/deploy-pages@v4
+      
+    - name: Output deployment URL
+      if: always()
+      run: |
+        echo "🚀 Deployment complete!"
+        echo "📊 Report URL: https://vladeezyy.github.io/testAI/"
+        echo "🔗 Deployment ID: ${{ steps.deployment.outputs.page_url }}"
         
     - name: Upload test artifacts
       if: always()
