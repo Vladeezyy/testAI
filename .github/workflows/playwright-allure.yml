@@ -44,7 +44,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./allure-report
+        publish_dir: ./docs
         destination_dir: allure-report
         
     - name: Upload test artifacts
@@ -55,6 +55,7 @@ jobs:
         path: |
           allure-results/
           allure-report/
+          docs/
           test-results/
         retention-days: 30
         
