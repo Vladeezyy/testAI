@@ -1,0 +1,116 @@
+{
+  "AdvancedMC": {
+    "items": [
+      {
+        "category": "AdvancedMC",
+        "url": "https://www.picmg.org/spec-product/am-c8x-msd-amc-processor/",
+        "description": "Manufacturer Concurrent Technologies PLC. Product AM C8x msd AMC Processor. AdvancedMC processor board based on a 6 core Intel Xeon E 2276ME processor with 2.8GHz base frequency. Supports PCI Express or RapidIO fabric interfaces. Comes with 16GB soldered DDR4 ECC memory with dual channel architecture. Supports 1000BASE BX backplane connections usable at 10GBASE KR rates for higher Ethernet throughput."
+      },
+      {
+        "category": "AdvancedMC",
+        "url": "https://www.picmg.org/spec-product/vt951/",
+        "description": "Manufacturer VadaTech Inc. Product VT951. Rugged 1U chassis for Mil Aero and other shock and vibration environments. Lightweight aluminum construction with 6 single module mid size AMC slots. Front panel retention uses a single MicroTCA.1 screw opposite the ejector handle on each slot. Dual redundant PSUs hot swappable from the rear. Front to rear cooling and uses VadaTech 3rd generation MCH UTC004 for shelf management and features including crossbar clocking for low jitter and GPS IEEE1588 SyncE NTP. PCIe Gen3 routing provides dual x4 or single x8 to each AMC slot. Backplane provides direct connection between adjacent AMC slots on ports 2 to 3 and ports 12 to 20."
+      },
+      {
+        "category": "AdvancedMC",
+        "url": "https://www.picmg.org/spec-product/amc534/",
+        "description": "Manufacturer VadaTech Inc. Product AMC534. FPGA module with dual zQSFP plus connectors offering 100G performance with Port 0 at 100G and Port 1 up to 40G via the front panel. Compliant to AMC.1 AMC.2 and or AMC.4. On board reconfigurable FPGA interfaces directly to AMC FCLKA and TCLK A to D. FPGA interfaces to four DDR3 memory channels 32 bit each with 1GB per channel for 4GB total for buffering and queuing. On board quad core P2040 up to 1.2GHz with 2GB DDR3 128MB boot flash and 32GB SD card. PPC provides x4 PCIe to FPGA plus local bus and dual GbE routed to AMC ports 0 and 1."
+      }
+    ]
+  },
+  "AdvancedTCA": {
+    "items": [
+      {
+        "category": "AdvancedTCA",
+        "url": "https://www.picmg.org/spec-product/atca-co2-ac-dc-2-slot-3u/",
+        "description": "Manufacturer Comtel Electronics. Product ATCA CO2 AC DC 2 Slot 3U. Two slot AdvancedTCA chassis designed for limited rack space applications. Compliant with PICMG 3.0 Rev 3.0 and RoHS. Designed to meet NEBS and includes UL cUL CE. Supports redundant power supply options and multiple backplane topologies with advanced cooling and shelf management."
+      },
+      {
+        "category": "AdvancedTCA",
+        "url": "https://www.picmg.org/spec-product/netarium-14-14-slot-19-wide-13u-high-advancedtca-shelf-fully-integrated-reference-system/",
+        "description": "Manufacturer Advantech Co., LTD. Product Netarium 14. 14 slot 19 inch wide 13U high AdvancedTCA shelf reference system. Targeted for network equipment providers requiring high performance scalability and flexibility versus rackmount servers. Uses 40 Gigabit Ethernet backplanes switches and application blades. Optimized for rack level density to maximize processor cores network ports and switching capacity. Tailored for data communication markets including policy and charging enforcement network security real time traffic monitoring load balancing subscriber analytics and content optimization. Designed to meet carrier grade constraints with integrated chassis cooling power distribution and shelf management for high availability."
+      },
+      {
+        "category": "AdvancedTCA",
+        "url": "https://www.picmg.org/spec-product/art001/",
+        "description": "Manufacturer VadaTech Inc. Product ART001. ATCA Rear Transition Module for I O expansion providing GbE 10GbE PCIe and management I O for the front blade. Designed to mate with any ATCA carrier. Provides PCIe x8 via iPASS connector to the rear. GbE rear access via six SFP ports and five RJ45 ports. Dual 10GbE PHY mates via zone 3 connector and provides dual SFP plus to the rear. Also provides dual RS232 ports for management and RTM IPMI access."
+      }
+    ]
+  },
+  "MicroTCA": {
+    "items": [
+      {
+        "category": "MicroTCA",
+        "url": "https://www.picmg.org/spec-product/samtec-microtca-connectors/",
+        "description": "Manufacturer Samtec. Product Samtec MicroTCA Connectors. Edge card connectors supporting 1.60 mm cards. Supports hot plugging and high speed serial connections up to 12.0 GHz and 24 Gbps. Compliant with MicroTCA architecture and supports up to 170 IO contacts."
+      },
+      {
+        "category": "MicroTCA",
+        "url": "https://www.picmg.org/spec-product/rackpakm5-1-the-next-step-mtca-4-chassis/",
+        "description": "Manufacturer powerBridge Computer Vertriebs GmbH. Product RackPak M5 1. MicroTCA chassis 2U 19 inch rack offering up to 6 AdvancedMC slots with 5 MTCA.4 compliant slots and up to 5 uRTMs. Intended for small low cost platforms in medical industrial automation transportation military and telecommunication. Supports up to 6 CPU modules or I O intensive configurations. Includes exchangeable field replaceable cooling unit with left to right cooling. Optional JTAG module for FPGA access. Supports MTCA.0 AC power supplies or a 1000W PSU. Designed for 80W per slot. Dust filter and fan cartridge are hot swappable. Optional DC input power supply available."
+      },
+      {
+        "category": "MicroTCA",
+        "url": "https://www.picmg.org/spec-product/amc523/",
+        "description": "Manufacturer VadaTech Inc. Product AMC523. Dual DAC module compliant to MicroTCA.4. On board reconfigurable FPGA interfaces to GbE and PCIe bus and connects to 12 channel ADC digital LVDS from MRT523 RTM. FPGA interfaces to DDR3 memory for buffering and queuing. Supports flexible external or internal clocking. Trig In Out from front panel or port 17. I O to RTM connector compliant with uTCA.4. Front panel interfaces include quad SFP plus I O headers JTAG clock in trig in out LEDs and optional RS232 for soft processor serial console."
+      }
+    ]
+  },
+  "CompactPCI": {
+    "items": [
+      {
+        "category": "CompactPCI Serial",
+        "url": "https://www.picmg.org/spec-product/compactpci-serial-9-slots-3u-backplane-front-and-rtm-slots/",
+        "description": "Manufacturer Comtel Electronics. Product CompactPCI Serial 9 slot 3U backplane. Designed for use with Comtel CompactPCI Serial chassis. Supports PCIe Gen3 USB 2.0 and 3.0 SATA 3.0 and 10 Gbps Ethernet in star configuration. RoHS compliant."
+      },
+      {
+        "category": "CompactPCI Serial",
+        "url": "https://www.picmg.org/spec-product/mic-3821/",
+        "description": "Manufacturer Advantech Co., LTD. Product MIC 3821. 3U CompactPCI Serial M.2 PCIe NVMe SSD carrier board. CompactPCI Serial interface peripheral board and carrier for up to four M.2 PCIe NVMe modules. Designed to meet EN50155 EN50121-3-2 and EN50121-4 for railway and industrial applications. PCI SIG PCI Express M.2 specification compliant and PICMG CompactPCI Serial CPCI S.0 R2.0 compliant."
+      },
+      {
+        "category": "CompactPCI Serial",
+        "url": "https://www.picmg.org/spec-product/g229-usb-3-2-uart-m-2-ssd-interface-board/",
+        "description": "Manufacturer duagon Germany GmbH. Product G229 USB 3.2 UART and M.2 SSD interface board. I O expansion board for CompactPCI Serial that adds common functions to a CPU board in a single slot and can serve as a main boot device. Designed and tested for railway and industrial markets. Provides three USB 3.2 Gen 1x1 ports and isolated RS232 and RS422 485 interfaces. Includes an M.2 slot supporting NVMe connected via PCIe x1 for fast boot and storage. Low power solution for extended temperature range."
+      }
+    ]
+  },
+  "COM-HPC": {
+    "items": [
+      {
+        "category": "COM-HPC",
+        "url": "https://www.picmg.org/spec-product/com-hpc-mmtl-com-hpc-mini-type-module-with-intel-core-ultra-processor/",
+        "description": "Manufacturer ADLINK Technology Inc. Product COM HPC mMTL Mini Type Module. Based on Intel Core Ultra processor. Supports up to 14 CPU cores with integrated GPU and NPU, up to 64GB LPDDR5X memory, PCIe lanes, Ethernet, USB4, and SATA. Designed for compact power efficient edge computing applications including medical industrial automation data logging autonomous driving and AI robotics."
+      },
+      {
+        "category": "COM-HPC",
+        "url": "https://www.picmg.org/spec-product/ampere-altra-developer-rugged/",
+        "description": "Manufacturer ADLINK Technology Inc. Product Ampere Altra Developer Rugged. Rugged 4U rackmount server platform for cloud native embedded edge development. Can host SOAFEE environment and is compatible with Autoware Open AD Kit. Uses EDKII bootloader with UEFI allowing installation of stock AArch64 OS images such as Ubuntu via live ISO. Powered by Ampere Altra SoC for scalable power and performance across embedded use cases. Includes COM HPC Ampere Altra server type module with 128 core SoC, server base carrier with 4x 10GbE LAN, 6x16GB DDR4 ECC registered memory, 1TB NVMe M.2 storage, 64 PCIe Gen4 lanes with multiple slots, liquid cooling assembly, 750W power unit, and 4U chassis with rail mounting holes."
+      },
+      {
+        "category": "COM-HPC",
+        "url": "https://www.picmg.org/spec-product/supermicro-x11sdc/",
+        "description": "Manufacturer Supermicro. Product X11SDC. COM HPC server type size D 160x160 mm. Supports Intel Xeon D 2100 series up to 16 cores with 100W TDP. Up to 256GB memory using 4 RDIMM or LRDIMM slots. Up to 44 PCIe Gen3 lanes with mixed link widths plus USB and SATA. Supports up to four 10GBASE KR ports and one 1000BASE T. Operating temperature 0 to 60C. CE and FCC Class B certified."
+      }
+    ]
+  },
+  "COM Express": {
+    "items": [
+      {
+        "category": "COM Express",
+        "url": "https://www.picmg.org/spec-product/msc-c6b-tlh-2/",
+        "description": "Manufacturer Tria Technologies. Product MSC C6B TLH. COM Express module supporting 11th generation Intel Core vPro, Intel Xeon W 11000E, and Intel Celeron processors. CPU scales from 2 cores to 8 cores. Supports PCIe Gen3 lanes and PEG port, Intel i225 Ethernet with 1GbE and 2.5GbE plus TSN, optional ECC memory, extended temperature options, and long term availability."
+      },
+      {
+        "category": "COM Express",
+        "url": "https://www.picmg.org/spec-product/msc-c6c-slu-2/",
+        "description": "Manufacturer Tria Technologies. Product MSC C6C SLU. COM Express module based on Intel 6th generation Core processors using 14 nm technology with processor graphics and chipset on one carrier. Supports triple independent displays up to 4k x 2k, hardware video encoding decoding, DDR4 memory, multiple USB 3.0 and 2.0 interfaces, and Type 6 pin out with modern display interfaces. Supports multiple dual core CPU options including Core i7 6600U, i5 6300U, i3 6100U, and Celeron 3955U. Provides SATA, microSD, PCIe x1 lanes, optional TPM and TCG aligned security features."
+      },
+      {
+        "category": "COM Express",
+        "url": "https://www.picmg.org/spec-product/com-45sp/",
+        "description": "Manufacturer AAEON Technology Inc. Product COM 45SP. COM Express module designed around Intel GM45 chipset supporting Intel Core 2 Duo and Celeron M Socket P processors on 45nm process. Supports up to 8GB DDR3 dual channel via two 204 pin SODIMM sockets. Provides Gigabit Ethernet and eight USB 2.0 ports. Supports PCI Express x16 lanes through GMCH plus additional PCIe x1 lanes from ICH9M and includes PCI, LPC, SMBus and I2C. Operates from a wide DC input range of 8.5V to 19V."
+      }
+    ]
+  }
+}

@@ -276,4 +276,64 @@ export class BoardBotPage {
       console.log('ℹ️  Secondary Results tab not found');
     }
   }
+/**
+ * Get product description by clicking More Info button for a specific product
+ * @param productIndex - Zero-based index of the product in results table
+ * @returns Product description text or empty string if not found
+ */
+async getProductDescription(productIndex: number): Promise<string> {
+  try {
+    console.log(`   📖 Getting description for Product ${productIndex + 1}...`);
+    
+    const rows = this.resultsTable.locator('tbody tr');
+    const row = rows.nth(productIndex);
+    const cells = row.locator('td');
+    
+    // Find and click More Info button
+    const cellCount = await cells.count();
+    let buttonCell = null;
+    
+    for (let cellIndex = 0; cellIndex < cellCount; cellIndex++) {
+      const cell = cells.nth(cellIndex);
+      const button = cell.locator('button');
+      const btnCount = await button.count();
+      
+      if (btnCount > 0) {
+        const btnText = await button.first().textContent();
+        if (btnText?.toLowerCase().includes('more') || btnText?.toLowerCase().includes('info')) {
+          buttonCell = button.first();
+          break;
+        }
+      }
+    }
+    
+    if (!buttonCell) {
+      console.log(`   ⚠️  More Info button not found`);
+      return '';
+    }
+    
+    // Listen for new page/tab
+    const pagePromise = this.page.context().waitForEvent('page');
+    await buttonCell.click();
+    
+    const newPage = await pagePromise;
+    await newPage.waitForLoadState('domcontentloaded', { timeout: 10000 });
+    await newPage.waitForTimeout(1500);
+    
+    // Extract all text content from the page
+    const bodyText = await newPage.locator('body').textContent() || '';
+    
+    // Close the modal/page
+    await newPage.close();
+    await this.page.waitForTimeout(500);
+    
+    console.log(`   ✅ Description extracted (${bodyText.length} chars)`);
+    return bodyText;
+    
+  } catch (error) {
+    console.log(`   ⚠️  Error getting description: ${error}`);
+    return '';
+  }
+}
+
 }

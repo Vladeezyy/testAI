@@ -78,8 +78,11 @@ test.describe('AdvancedTCA Product Search - Suite 1.1', () => {
     let products: ProductInfo[] = [];
     await test.step('Extract product information and capture screenshot', async () => {
       products = await TestBase.extractProducts(page, boardBotPage, maxProducts);
+    });    
+    await test.step('AI Product Validation', async () => {
+      await TestBase.validateWithAI(page, boardBotPage, products, searchPrompt, expectedCategory, 'AdvancedTCA_TC1.1');
     });
-    
+
     await test.step('Validate categories and generate report', async () => {
       await TestBase.validateAndGenerateReport(
         products,

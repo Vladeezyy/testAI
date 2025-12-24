@@ -80,8 +80,11 @@ test.describe('COM-HPC Product Search - Suite 2.1', () => {
     let products: ProductInfo[] = [];
     await test.step('Extract product information and capture screenshot', async () => {
       products = await TestBase.extractProducts(page, boardBotPage, maxProducts);
+    });    
+    await test.step('AI Product Validation', async () => {
+      await TestBase.validateWithAI(page, boardBotPage, products, searchPrompt, expectedCategories[0], 'COM-HPC_TC2.1');
     });
-    
+
     await test.step('Validate categories and generate report', async () => {
       // Custom validation for multiple acceptable categories
       for (const [index, product] of products.entries()) {

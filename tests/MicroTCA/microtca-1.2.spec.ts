@@ -78,8 +78,11 @@ test.describe('MicroTCA Product Search - Suite 1.2', () => {
     let products: ProductInfo[] = [];
     await test.step('Extract product information and capture screenshot', async () => {
       products = await TestBase.extractProducts(page, boardBotPage, maxProducts);
+    });    
+    await test.step('AI Product Validation', async () => {
+      await TestBase.validateWithAI(page, boardBotPage, products, searchPrompt, expectedCategory, 'MicroTCA_TC1.2');
     });
-    
+
     await test.step('Validate categories and generate report', async () => {
       await TestBase.validateAndGenerateReport(
         products,

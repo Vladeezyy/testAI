@@ -80,8 +80,11 @@ test.describe('CompactPCI Product Search - Suite 1.2', () => {
     let products: ProductInfo[] = [];
     await test.step('Extract product information and capture screenshot', async () => {
       products = await TestBase.extractProducts(page, boardBotPage, maxProducts);
+    });    
+    await test.step('AI Product Validation', async () => {
+      await TestBase.validateWithAI(page, boardBotPage, products, searchPrompt, expectedCategories[0], 'CompactPCI_TC1.2');
     });
-    
+
     await test.step('Validate categories and generate report', async () => {
       // Custom validation for multiple acceptable categories
       for (const [index, product] of products.entries()) {

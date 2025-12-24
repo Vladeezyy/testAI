@@ -1,4 +1,5 @@
 import { Page } from '@playwright/test';
+import { AIValidator } from '../../utils/AIValidator';
 import { BoardBotPage, ProductInfo } from '../../pages/AdvancedMC/BoardBotPage';
 import { ReportGenerator } from '../../utils/ReportGenerator';
 import {
@@ -306,4 +307,129 @@ More Info: ${product.moreInfoUrl}
       console.log('⚠️  No products to validate');
     }
   }
+
+  /**
+   * Validate products using AI by reading actual product descriptions
+   * Opens each product's More Info page and validates against search query
+   */
+  static async validateWithAI(
+  page: Page,
+  boardBotPage: BoardBotPage,
+  products: ProductInfo[],
+  searchPrompt: string,
+  expectedCategory: string,
+  testId: string
+): Promise<void> {
+  const useAI = process.env.USE_AI_VALIDATION === 'true';
+  
+  if (!useAI) {
+    console.log('ℹ️  AI validation disabled (set USE_AI_VALIDATION=true to enable)');
+    return;
+  }
+
+  if (products.length === 0) {
+    console.log('ℹ️  No products to validate with AI');
+    return;
+  }
+
+  console.log('\n🤖 AI VALIDATION ENABLED\n');
+  
+  const aiValidator = new AIValidator();
+  
+  // Check if Ollama is available
+  const available = await aiValidator.checkAvailability();
+  if (!available) {
+    console.log('⚠️  Ollama not available - skipping AI validation');
+    console.log('   Make sure Ollama is running: ollama serve');
+    return;
+  }
+
+  const suiteNumber = AIValidator.getSuiteNumber(testId);
+  console.log(`📍 Suite: ${suiteNumber} | Category: ${expectedCategory}`);
+  
+  // Limit to max 5 products
+  const productsToValidate = Math.min(products.length, 5);
+  console.log(`📦 Validating ${productsToValidate} products with AI...\n`);
+
+  let relevantCount = 0;
+  const aiResults: Array<{index: number, isRelevant: boolean, confidence: number, reasoning: string}> = [];
+
+  for (let i = 0; i < productsToValidate; i++) {
+    const product = products[i];
+    console.log(`\n🤖 AI validating Product ${i + 1}: ${product.productName}`);
+    
+    // Get product description from More Info page
+    const description = await boardBotPage.getProductDescription(i);
+    
+    if (!description || description.length < 50) {
+      console.log(`   ⚠️  Description too short or not found, skipping AI validation`);
+      await parameter(
+        `🤖 AI Product ${i + 1}`,
+        `⚠️ Skipped - No description available`
+      );
+      continue;
+    }
+    
+    // Validate with AI
+    const aiResult = await aiValidator.validateProductRelevance(
+      product.productName,
+      product.category,
+      description,
+      searchPrompt,
+      expectedCategory,
+      suiteNumber
+    );
+
+    const emoji = aiResult.isRelevant ? '✅' : '❌';
+    console.log(`   ${emoji} AI says: ${aiResult.isRelevant ? 'RELEVANT' : 'NOT RELEVANT'}`);
+    console.log(`   📊 Confidence: ${aiResult.confidence}%`);
+    console.log(`   💭 Reasoning: ${aiResult.reasoning}`);
+    
+    // Track results
+    if (aiResult.isRelevant) {
+      relevantCount++;
+    }
+    aiResults.push({
+      index: i,
+      isRelevant: aiResult.isRelevant,
+      confidence: aiResult.confidence,
+      reasoning: aiResult.reasoning
+    });
+    
+    await parameter(
+      `🤖 AI Product ${i + 1}`,
+      `${aiResult.isRelevant ? '✅' : '❌'} ${aiResult.confidence}% - ${aiResult.reasoning}`
+    );
+    
+    // Add to Allure report
+    const aiSummary = `
+**Product:** ${product.productName}
+**AI Verdict:** ${aiResult.isRelevant ? '✅ RELEVANT' : '❌ NOT RELEVANT'}
+**Confidence:** ${aiResult.confidence}%
+**Reasoning:** ${aiResult.reasoning}
+**Original Product:** ${aiResult.originalProduct || 'Unknown'}
+    `.trim();
+    
+    await attachment(
+      `🤖 AI Analysis - Product ${i + 1}`,
+      aiSummary,
+      { contentType: 'text/plain' }
+    );
+  }
+  
+  console.log('\n✨ AI validation complete\n');
+  console.log(`📊 AI Results: ${relevantCount}/${productsToValidate} products marked as RELEVANT\n`);
+  
+  // Add summary to Allure
+  await parameter('🤖 AI Summary', `${relevantCount}/${productsToValidate} relevant products`);
+  
+  // Fail test if NO products are relevant according to AI
+  if (relevantCount === 0) {
+    const errorMsg = `❌ AI VALIDATION FAILED: None of the ${productsToValidate} products are relevant according to AI analysis.\n\nAI Verdicts:\n${aiResults.map(r => `  Product ${r.index + 1}: ${r.isRelevant ? '✅' : '❌'} (${r.confidence}%) - ${r.reasoning}`).join('\n')}`;
+    console.error(`\n${errorMsg}\n`);
+    throw new Error(errorMsg);
+  } else {
+    console.log(`✅ AI validation passed: Found ${relevantCount} relevant product(s)\n`);
+  }
+}
 }

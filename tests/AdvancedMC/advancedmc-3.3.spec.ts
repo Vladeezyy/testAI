@@ -79,8 +79,11 @@ test.describe('AdvancedMC Product Search - Suite 3.3', () => {
     let products: ProductInfo[] = [];
     await test.step('Extract product information and capture screenshot', async () => {
       products = await TestBase.extractProducts(page, boardBotPage, maxProducts);
+    });    
+    await test.step('AI Product Validation', async () => {
+      await TestBase.validateWithAI(page, boardBotPage, products, searchPrompt, expectedCategory, 'AdvancedMC_TC3.3');
     });
-    
+
     await test.step('Validate categories and generate report', async () => {
       await TestBase.validateAndGenerateReport(
         products,
