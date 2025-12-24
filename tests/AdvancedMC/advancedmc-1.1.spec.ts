@@ -1,4 +1,4 @@
-import { test, expect } from '../common/fixtures';
+import { test, expect } from '@playwright/test';
 import { BoardBotPage, ProductInfo } from '../../pages/AdvancedMC/BoardBotPage';
 import { TestBase } from '../common/TestBase';
 import { 
