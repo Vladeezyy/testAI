@@ -60,7 +60,7 @@ jobs:
         RUN_NUMBER="${{ github.run_number }}"
         
         # Generate report to temp location
-        npm run report:allure:generate
+        npm run allure:generate
         
         # Create new structure
         mkdir -p allure-reports/run-${RUN_NUMBER}-${TIMESTAMP}
