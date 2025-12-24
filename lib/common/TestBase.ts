@@ -322,6 +322,19 @@ More Info: ${product.moreInfoUrl}
 ): Promise<void> {
   const useAI = process.env.USE_AI_VALIDATION === 'true';
   
+  // Always show original product URL (whether AI is enabled or not)
+  const suiteNumber = AIValidator.getSuiteNumber(testId);
+  const aiValidator = new AIValidator();
+  const originalProduct = aiValidator.getOriginalProduct(expectedCategory, suiteNumber);
+  
+  if (originalProduct) {
+    await parameter('🔗 Original Product URL', originalProduct.url);
+    console.log(`🔗 Original Product URL: ${originalProduct.url}\n`);
+  } else {
+    await parameter('⚠️  Original Product URL', 'Not found in list.json');
+    console.log(`\n⚠️  Original Product URL: Not found in list.json\n`);
+  }
+  
   if (!useAI) {
     console.log('ℹ️  AI validation disabled (set USE_AI_VALIDATION=true to enable)');
     return;
@@ -334,8 +347,6 @@ More Info: ${product.moreInfoUrl}
 
   console.log('\n🤖 AI VALIDATION ENABLED\n');
   
-  const aiValidator = new AIValidator();
-  
   // Check if Ollama is available
   const available = await aiValidator.checkAvailability();
   if (!available) {
@@ -344,7 +355,6 @@ More Info: ${product.moreInfoUrl}
     return;
   }
 
-  const suiteNumber = AIValidator.getSuiteNumber(testId);
   console.log(`📍 Suite: ${suiteNumber} | Category: ${expectedCategory}`);
   
   // Limit to max 5 products

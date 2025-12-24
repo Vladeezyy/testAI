@@ -33,7 +33,7 @@ export class AIValidator {
    * Suite 2 (tests 2.1-2.3) = items[1]
    * Suite 3 (tests 3.1-3.3) = items[2]
    */
-  private getOriginalProduct(category: string, suiteNumber: number): ProductReference | null {
+  getOriginalProduct(category: string, suiteNumber: number): ProductReference | null {
     // Try exact match first
     let categoryData = this.productList[category];
     
@@ -163,7 +163,7 @@ JSON only (no markdown):
         isRelevant: result.isRelevant,
         confidence: result.confidence,
         reasoning: result.reasoning,
-        originalProduct: originalProduct.url.split('/').pop()
+        originalProduct: originalProduct.url.split('/').pop() || originalProduct.url || 'Unknown'
       };
 
     } catch (error) {
@@ -172,7 +172,7 @@ JSON only (no markdown):
         isRelevant: true,
         confidence: 0,
         reasoning: `AI validation failed: ${error instanceof Error ? error.message : 'Unknown'}`,
-        originalProduct: originalProduct.url.split('/').pop()
+        originalProduct: originalProduct.url.split('/').pop() || originalProduct.url || 'Unknown'
       };
     }
   }

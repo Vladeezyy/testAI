@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 120_000,  // 2 minutes per test
+  timeout: 240_000,  // 4 minutes per test (increased for AI validation)
   expect: { timeout: 10_000 },
   
   // Clear output directories before running tests
@@ -44,9 +44,9 @@ export default defineConfig({
 
   use: {
     baseURL: 'https://www.picmg.org/',
-    //trace: 'retain-on-failure',  // Keep traces for failed tests
-    screenshot: 'on',  // Disabled - using custom full-page screenshots in fixtures
-    //video: 'retain-on-failure',  // Keep videos only for failed tests
+    trace: 'off',  // Completely disabled - no traces
+    screenshot: 'off',  // Disabled - using custom full-page screenshot in TestBase
+    video: 'off',  // Completely disabled - no videos
     headless: true,
     viewport: { width: 1920, height: 1080 },  // Full HD for all tests
     

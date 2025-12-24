@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { BoardBotPage, ProductInfo } from '../../pages/AdvancedMC/BoardBotPage';
-import { TestBase } from '../common/TestBase';
+import { TestBase } from '../../lib/common/TestBase';
 import { 
   epic, 
   feature, 
@@ -21,7 +21,7 @@ test.describe('MicroTCA Product Search - Suite 2.3', () => {
   });
   
   test('TC2.3: Search for 2U MTCA.4 chassis with µRTM support', async ({ page }) => {
-    test.setTimeout(120000); // 2 minutes
+    test.setTimeout(240000); // 4 minutes for AI validation // 2 minutes
     await page.setViewportSize({ width: 1920, height: 1080 });
     
     await epic('Product Search');

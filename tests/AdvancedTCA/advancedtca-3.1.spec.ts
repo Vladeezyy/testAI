@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { BoardBotPage, ProductInfo } from '../../pages/AdvancedMC/BoardBotPage';
-import { TestBase } from '../common/TestBase';
+import { TestBase } from '../../lib/common/TestBase';
 import { 
   epic, 
   feature, 
@@ -21,7 +21,7 @@ test.describe('AdvancedTCA Product Search - Suite 3.1', () => {
   });
   
   test('TC3.1: Search for ATCA rear module with Ethernet and PCIe', async ({ page }) => {
-    test.setTimeout(120000);
+    test.setTimeout(240000); // 4 minutes for AI validation
     await page.setViewportSize({ width: 1920, height: 1080 });
     
     await epic('Product Search');
